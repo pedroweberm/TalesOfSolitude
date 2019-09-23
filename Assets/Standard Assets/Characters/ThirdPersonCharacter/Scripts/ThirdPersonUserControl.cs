@@ -17,6 +17,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         bool mooving = false;
         float camRayLenght = 100f;
         NavMeshAgent playerAgent;
+        bool isIdle = true;
 
 
         private void Start()
@@ -37,6 +38,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+            playerAgent.updatePosition = true;
+            playerAgent.updateRotation = false;
         }
 
 
@@ -54,6 +57,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             if (Input.GetMouseButtonDown(0))
             {
+                isIdle = false;
                 Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hitInfo;
 
@@ -69,14 +73,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 {
                     if (!playerAgent.hasPath || playerAgent.velocity.sqrMagnitude == 0f)
                     {
-                        m_Character.Move(Vector3.zero, false, m_Jump);
+                        isIdle = true;
                         Debug.Log("Chegou ja");
                     }
                 }
             }
 
-            // pass all parameters to the character control script
-            m_Character.Move(playerAgent.destination - transform.position, false, m_Jump);
+            if (isIdle)
+            {
+                m_Character.Move(Vector3.zero, false, false);
+            }
+            else
+            {
+                // pass all parameters to the character control script
+                m_Character.Move(playerAgent.desiredVelocity, false, m_Jump);
+            }
         }
     }
 }

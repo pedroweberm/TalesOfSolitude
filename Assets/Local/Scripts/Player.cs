@@ -59,8 +59,6 @@ public class Player : MonoBehaviour
         m_TurnAmount = Mathf.Atan2(velocity.x, velocity.y);
         m_ForwardAmount = velocity.y;
 
-        Debug.Log(velocity);
-
         UpdateAnimator();
     }
 
