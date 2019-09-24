@@ -74,7 +74,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     if (!playerAgent.hasPath || playerAgent.velocity.sqrMagnitude == 0f)
                     {
                         isIdle = true;
-                        Debug.Log("Chegou ja");
                     }
                 }
             }
