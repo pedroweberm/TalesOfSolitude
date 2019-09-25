@@ -33,16 +33,7 @@ public class ClickToMove : MonoBehaviour
             }
         }
 
-        
-        if (playerAgent.remainingDistance <= playerAgent.stoppingDistance)
-        {         
-            playerRunning = false;    
-        }
-        
-        else
-        {
-            playerRunning = true;
-        }
+        playerRunning = !(playerAgent.remainingDistance <= playerAgent.stoppingDistance);
 
         playerAnimator.SetBool("running", playerRunning);
     }
