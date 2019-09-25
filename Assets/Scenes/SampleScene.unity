@@ -1239,8 +1239,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366772891}
-  m_LocalRotation: {x: 0.29293233, y: 0.44139406, z: 0.15501644, w: -0.83386564}
-  m_LocalPosition: {x: -6.971298, y: -59.618896, z: -42.92805}
+  m_LocalRotation: {x: -0.45527142, y: 0.24500772, z: 0.13186234, w: 0.8457609}
+  m_LocalPosition: {x: -10.642975, y: -11.6648245, z: -42.100506}
   m_LocalScale: {x: 0.10000005, y: 0.5812783, z: 0.51872176}
   m_Children: []
   m_Father: {fileID: 22615838}
@@ -2320,8 +2320,8 @@ GameObject:
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &691468860
 Transform:
@@ -19782,7 +19782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319444225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 404.3169, y: 12.382502, z: 108.110535}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
