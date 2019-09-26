@@ -32,10 +32,10 @@ MonoBehaviour:
     name: Grass_1
   - gameObject: {fileID: 100000, guid: 5d168d31bbcae474cb41567b06f917ae, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 20
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 0.75, z: 1}
+      m_ScaleRangeMin: {x: 1, y: 1.75, z: 1}
       m_ScaleRangeMax: {x: 1, y: 2.25, z: 1}
       m_UniformScale: {x: 1, y: 1}
       m_UniformBool: 0
@@ -48,11 +48,11 @@ MonoBehaviour:
     name: Tree Green 7
   - gameObject: {fileID: 100000, guid: 9d766bec5abc48744b16d772cbe73897, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 25
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 0.75, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 2.25, z: 1}
+      m_ScaleRangeMin: {x: 1, y: 2.5, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 3.5, z: 1}
       m_UniformScale: {x: 1, y: 1}
       m_UniformBool: 0
       m_XRotationBool: 0
@@ -64,11 +64,11 @@ MonoBehaviour:
     name: Tree Green 6
   - gameObject: {fileID: 100000, guid: 0d2a420ad355ae548badbdb250c4c345, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 70
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 2, z: 1}
+      m_ScaleRangeMin: {x: 1, y: 2.75, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 3.25, z: 1}
       m_UniformScale: {x: 1, y: 1}
       m_UniformBool: 0
       m_XRotationBool: 0
@@ -96,11 +96,11 @@ MonoBehaviour:
     name: Rock 14
   - gameObject: {fileID: 100000, guid: b56c09ab3e7ead14c9314cefb708a1bd, type: 3}
     settings:
-      m_Strength: 54.09274
+      m_Strength: 70
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 2, z: 1}
+      m_ScaleRangeMin: {x: 1, y: 2.75, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 3.25, z: 1}
       m_UniformScale: {x: 1, y: 1}
       m_UniformBool: 0
       m_XRotationBool: 0
@@ -126,3 +126,71 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 1
     name: Rotten Log 1
+  - gameObject: {fileID: 3715745603681793236, guid: ba20ac4a617a452469ef580160a1af11,
+      type: 3}
+    settings:
+      m_Strength: 2
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: DeadTreeFireflies
+  - gameObject: {fileID: 4339889283708010149, guid: ed5ed05c56c8717409c91e61219a82f4,
+      type: 3}
+    settings:
+      m_Strength: 5
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: DeadTreeWithStumpAndPlant
+  - gameObject: {fileID: 7409755122237577791, guid: a649ec06c15021b448813235bc882619,
+      type: 3}
+    settings:
+      m_Strength: 30
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 2}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: SimpleRockAndGrass
+  - gameObject: {fileID: 5638907630382415631, guid: d65c5d7bba36cfc42ae348b693890073,
+      type: 3}
+    settings:
+      m_Strength: 30
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1.5}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: SimpleRockAndSamambaia
