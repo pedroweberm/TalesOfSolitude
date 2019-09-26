@@ -54,6 +54,21 @@
                 "value": "{\"m_Value\":true}"
             },
             {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "Scattering.UsePivotForPlacement",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "Scattering.ParentObjectsWithSurface",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "Scattering.AvoidOverlappingObjects",
+                "value": "{\"m_Value\":true}"
+            },
+            {
                 "type": "UnityEngine.Polybrush.BrushMirror, Unity.Polybrush, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "Brush.MirrorAxis",
                 "value": "{\"m_Value\":0}"
@@ -96,7 +111,17 @@
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "GI.WorkflowMode",
-                "value": "{\"m_Value\":0}"
+                "value": "{\"m_Value\":1}"
+            },
+            {
+                "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "ScatteringEditor.PreviewThumSize",
+                "value": "{\"m_Value\":64}"
+            },
+            {
+                "type": "UnityEditor.Polybrush.PrefabLoadout, Unity.Polybrush.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "key": "ScatteringEditor.userLoadout",
+                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"ae8a7c23d88f4604e82e353090cf490f\",\"type\":2},\"prefab\":{\"fileID\":100000,\"guid\":\"5d168d31bbcae474cb41567b06f917ae\",\"type\":3}}]}}"
             }
         ]
     }

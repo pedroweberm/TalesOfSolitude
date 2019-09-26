@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc38003c0e0db6641a4762d4f392de52, type: 3}
+  m_Name: PrefabPalette-Default
+  m_EditorClassIdentifier: 
+  prefabs:
+  - gameObject: {fileID: 1943996455298776, guid: b2199aadf1bb8c4449f3edfc84a39f78,
+      type: 3}
+    settings:
+      m_Strength: 52.09677
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Grass_1
+  - gameObject: {fileID: 100000, guid: 5d168d31bbcae474cb41567b06f917ae, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 0.75, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 2.25, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 1
+      m_ZScaleBool: 0
+    name: Tree Green 7
+  - gameObject: {fileID: 100000, guid: 9d766bec5abc48744b16d772cbe73897, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 0.75, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 2.25, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 1
+      m_ZScaleBool: 0
+    name: Tree Green 6
+  - gameObject: {fileID: 100000, guid: 0d2a420ad355ae548badbdb250c4c345, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 2, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 1
+      m_ZScaleBool: 0
+    name: Tree Green 9
+  - gameObject: {fileID: 100000, guid: 5916fc208609587449d830b60a5a8205, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 0.9, z: 1}
+      m_ScaleRangeMax: {x: 2.5, y: 1.75, z: 2.5}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Rock 14
+  - gameObject: {fileID: 100000, guid: b56c09ab3e7ead14c9314cefb708a1bd, type: 3}
+    settings:
+      m_Strength: 54.09274
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 2, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 1
+      m_ZScaleBool: 0
+    name: Tree Green 8
+  - gameObject: {fileID: 100000, guid: 2dc2fb6aea919f641912ceeea48de1df, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 0.75}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 2.25}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Rotten Log 1

@@ -20,14 +20,14 @@ public class ClickToMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(clickRay, out hitInfo, 100))
+            if (Physics.Raycast(clickRay, out hitInfo, 300))
             {
                 playerAgent.SetDestination(hitInfo.point);
             }
