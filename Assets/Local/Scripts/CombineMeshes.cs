@@ -40,7 +40,7 @@ public class CombineMeshes : MonoBehaviour
         transform.rotation = Quaternion.identity;
         transform.position = Vector3.zero;
 
-        var savePath = "Assets/Local/CombinedGreenArea.asset";
+        var savePath = "Assets/Local/CombinedBlueArea.asset";
         Debug.Log("Saved Mesh to:" + savePath);
         AssetDatabase.CreateAsset(meshFilter.mesh, savePath);
     }
