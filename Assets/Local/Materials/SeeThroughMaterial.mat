@@ -28,4 +28,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - _MainColor: {r: 0.9433962, g: 0.031149892, b: 0.031149892, a: 0}
+    - _SeeThroughColor: {r: 0, g: 0.6262355, b: 1, a: 0}
