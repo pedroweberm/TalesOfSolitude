@@ -146,7 +146,7 @@ MonoBehaviour:
   - gameObject: {fileID: 7409755122237577791, guid: a649ec06c15021b448813235bc882619,
       type: 3}
     settings:
-      m_Strength: 30
+      m_Strength: 10
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -163,7 +163,7 @@ MonoBehaviour:
   - gameObject: {fileID: 5638907630382415631, guid: d65c5d7bba36cfc42ae348b693890073,
       type: 3}
     settings:
-      m_Strength: 30
+      m_Strength: 10
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -180,7 +180,7 @@ MonoBehaviour:
   - gameObject: {fileID: 3715745603681793236, guid: ba20ac4a617a452469ef580160a1af11,
       type: 3}
     settings:
-      m_Strength: 6
+      m_Strength: 1
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -277,7 +277,7 @@ MonoBehaviour:
     name: Grass_2
   - gameObject: {fileID: 100000, guid: 9d7a05c8fcc0ec942beb65edab2a4366, type: 3}
     settings:
-      m_Strength: 20
+      m_Strength: 5
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -293,7 +293,7 @@ MonoBehaviour:
     name: Mushroom 2
   - gameObject: {fileID: 100000, guid: acf0368a6c8e80d45804051cb009f2c0, type: 3}
     settings:
-      m_Strength: 20
+      m_Strength: 5
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -485,7 +485,7 @@ MonoBehaviour:
     name: Flat_Bone_02
   - gameObject: {fileID: 186700, guid: 458a74fb5b4f6ee4f8ec12ac39eb02a7, type: 3}
     settings:
-      m_Strength: 20
+      m_Strength: 5
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -793,3 +793,83 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 1
     name: BlueRocks
+  - gameObject: {fileID: 100000, guid: 16b873c5c2fb5f2419b184a329659cb0, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 2}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Tree Bare 1
+  - gameObject: {fileID: 100000, guid: ed761a0bcc44d7a4fb533740c072d638, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 2}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Tree Bare 2
+  - gameObject: {fileID: 100000, guid: a9949a49faa97bb4ba9e57e70e3743f7, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 2}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Tree Bare 4
+  - gameObject: {fileID: 100000, guid: 2d461a73dcb31f6489a1935d31e7db92, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1.5}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Tree Bare 7
+  - gameObject: {fileID: 100000, guid: a9cd9ba72cf561c4fa0ddb2dcf22b7d5, type: 3}
+    settings:
+      m_Strength: 10
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 2}
+      m_UniformBool: 1
+      m_XRotationBool: 0
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 1
+    name: Tree Bare 8
