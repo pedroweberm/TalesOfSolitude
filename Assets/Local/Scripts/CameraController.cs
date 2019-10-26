@@ -9,8 +9,6 @@ public class CameraController : MonoBehaviour
 
     Vector3 offset;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector3(target.position.x, target.position.y + 58, target.position.z - 63);
@@ -18,8 +16,7 @@ public class CameraController : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         Vector3 targetCamPos = target.position + offset;
 

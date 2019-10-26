@@ -1,32 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(Player))]
+
+[RequireComponent(typeof(PlayerMovement))]
 public class PlayerController : MonoBehaviour
 {
-    
-    private Player m_Player;                  // A reference to the Player on the object
-    private Vector3 m_Move;                   // the world-relative desired move direction, calculated from the camForward and user input.
+    public LayerMask groundLayer;
+    public Interactable currentFocus;
 
+    PlayerMovement playerMovement;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        m_Player = GetComponent<Player>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
 
-        m_Move.Set(h, 0f, v);
+            if (Physics.Raycast(clickRay, out hitInfo, 300, groundLayer))
+            {
+                playerMovement.MoveToPoint(hitInfo.point);
 
-        m_Player.Turning();
+                RemoveFocus();
+            }
+        }
 
-        m_Player.Move(m_Move);
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+
+            if (Physics.Raycast(clickRay, out hitInfo, 300))
+            {
+                Interactable interactableHit = hitInfo.collider.GetComponent<Interactable>();
+                if (interactableHit != null)
+                {
+                    SetFocus(interactableHit);
+                }
+            }
+        }
     }
 
-    
+    void SetFocus(Interactable newFocus)
+    {
+        currentFocus = newFocus;
+        playerMovement.FollowTarget(newFocus);
+    }
+
+    void RemoveFocus()
+    {
+        currentFocus = null;
+        playerMovement.StopFollowing();
+    }
 }
