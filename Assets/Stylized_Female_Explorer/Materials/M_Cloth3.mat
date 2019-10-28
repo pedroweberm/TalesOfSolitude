@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Cloth3
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: fa63a26b21f647f46ad30668de985c1d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -75,3 +75,5 @@ Material:
     m_Colors:
     - _Color: {r: 0.5283019, g: 0.08223568, b: 0.098166555, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _MainColor: {r: 0.5294118, g: 0.08235294, b: 0.09803922, a: 0}
+    - _SeeThroughColor: {r: 1, g: 0.40000004, b: 0, a: 255}
