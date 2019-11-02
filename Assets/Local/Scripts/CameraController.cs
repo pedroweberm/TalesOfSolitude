@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;
-    public float smoothing = 5f;
+    public float smoothing = 15f;
 
     Vector3 offset;
 
@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         Vector3 targetCamPos = target.position + offset;
 
