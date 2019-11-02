@@ -52,12 +52,22 @@ public class PlayerController : MonoBehaviour
 
     void SetFocus(Interactable newFocus)
     {
-        currentFocus = newFocus;
-        playerMovement.FollowTarget(newFocus);
+        if (newFocus != currentFocus)
+        {
+            if (currentFocus != null)
+                currentFocus.onDefocused();
+
+            currentFocus = newFocus;
+            playerMovement.FollowTarget(newFocus);
+        }
+        newFocus.onFocused(transform);
     }
 
     void RemoveFocus()
     {
+        if (currentFocus != null)
+            currentFocus.onDefocused();
+
         currentFocus = null;
         playerMovement.StopFollowing();
     }

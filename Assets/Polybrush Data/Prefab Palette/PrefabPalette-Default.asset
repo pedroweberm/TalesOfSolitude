@@ -126,23 +126,6 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 1
     name: Rotten Log 1
-  - gameObject: {fileID: 4339889283708010149, guid: ed5ed05c56c8717409c91e61219a82f4,
-      type: 3}
-    settings:
-      m_Strength: 7
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 1.5}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: DeadTreeWithStumpAndPlant
   - gameObject: {fileID: 7409755122237577791, guid: a649ec06c15021b448813235bc882619,
       type: 3}
     settings:
@@ -160,23 +143,6 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 1
     name: SimpleRockAndGrass
-  - gameObject: {fileID: 5638907630382415631, guid: d65c5d7bba36cfc42ae348b693890073,
-      type: 3}
-    settings:
-      m_Strength: 10
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1.5, y: 3}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: SimpleRockAndSamambaia
   - gameObject: {fileID: 3715745603681793236, guid: ba20ac4a617a452469ef580160a1af11,
       type: 3}
     settings:
@@ -596,73 +562,6 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 1
     name: Grey Boulder
-  - gameObject: {fileID: 4252771965546465106, guid: fbcdb7d409d285f4e92b07b187a2a7b0,
-      type: 3}
-    settings:
-      m_Strength: 25
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 2, y: 2}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: Grey Boulder 2
-  - gameObject: {fileID: 4063040854679002405, guid: a2ad3bd97d754e34f9d551bc0a04a86f,
-      type: 3}
-    settings:
-      m_Strength: 20
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 1.25}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: Complex Grey Boulder
-  - gameObject: {fileID: 6902231813515176840, guid: 781032e93327d8542bd58773f721a9ba,
-      type: 3}
-    settings:
-      m_Strength: 25
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 0.75, y: 1.25}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: Small Rocks
-  - gameObject: {fileID: 101208, guid: e13d89ce323009a4a8a53d439b0a74e4, type: 3}
-    settings:
-      m_Strength: 25
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 1.5}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 1
-    name: rock_g
   - gameObject: {fileID: 100000, guid: f31fe1252a2c6b540bfadf4df01bcbfd, type: 3}
     settings:
       m_Strength: 25

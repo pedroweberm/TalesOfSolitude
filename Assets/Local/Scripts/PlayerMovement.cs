@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     public void FollowTarget(Interactable newTarget)
     {
         playerAgent.stoppingDistance = newTarget.interactRadius * 0.8f;
-        followTarget = newTarget.transform;
+        followTarget = newTarget.interactionTransform;
     }
 
     public void StopFollowing()
