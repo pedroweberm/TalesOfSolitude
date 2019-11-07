@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerNecessities : MonoBehaviour
 {
-    public TickManager tickManager;
     public int playerInitialHealth = 1000;
     public int playerMinHealth = 100;
     public int playerInitialHunger = 100;
@@ -26,7 +25,6 @@ public class PlayerNecessities : MonoBehaviour
 
     private int currentTick = 0;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +34,13 @@ public class PlayerNecessities : MonoBehaviour
         playerHunger = playerInitialHunger;
         playerThirst = playerInitialThirst;
 
-        currentTick = tickManager.tickCount;
+        currentTick = TickManager.global.tickCount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTick = tickManager.tickCount;
+        currentTick = TickManager.global.tickCount;
 
         UpdateHunger(0);
         UpdateThirst(0);
