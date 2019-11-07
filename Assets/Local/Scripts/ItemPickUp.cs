@@ -7,6 +7,12 @@ public class ItemPickUp : Interactable
     {
         base.Interact();
 
+        if (interactionTransform == null)
+        {
+            interactionTransform = transform;
+        }
+
+
         PickUp();
     }
 
