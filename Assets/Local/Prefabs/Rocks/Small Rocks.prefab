@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &2622732666738714399
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717079859250443844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 1e64ea19b4d014c4ab33b8345425c9e3, type: 3}
 --- !u!114 &6805078818023963596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,20 +417,6 @@ MonoBehaviour:
   m_OriginalMeshObject: {fileID: 4300000, guid: 1e64ea19b4d014c4ab33b8345425c9e3,
     type: 3}
   m_Mode: 0
---- !u!64 &2622732666738714399
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4717079859250443844}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 1e64ea19b4d014c4ab33b8345425c9e3, type: 3}
 --- !u!1 &6902231813515176840
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +426,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4288986928987060815}
-  - component: {fileID: 2972746252510130366}
   - component: {fileID: -6674149127163760719}
+  - component: {fileID: 7604479588995219382}
   m_Layer: 0
   m_Name: Small Rocks
   m_TagString: Untagged
@@ -452,20 +452,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2972746252510130366
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6902231813515176840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!114 &-6674149127163760719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +467,19 @@ MonoBehaviour:
   interactRadius: 3
   interactionTransform: {fileID: 4288986928987060815}
   item: {fileID: 11400000, guid: 86ab234264956e741a42fba6b02c7265, type: 2}
+--- !u!65 &7604479588995219382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6902231813515176840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1, y: 3, z: 2}
+  m_Center: {x: 0.6, y: 0.1724844, z: 0.8}
 --- !u!1001 &4709278686029902034
 PrefabInstance:
   m_ObjectHideFlags: 0

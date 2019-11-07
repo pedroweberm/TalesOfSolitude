@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813311446664225101}
   - component: {fileID: -7347463388404757634}
-  - component: {fileID: -2909701815126392965}
+  - component: {fileID: 5785506917179587204}
   m_Layer: 0
   m_Name: SimpleRockAndSamambaia
   m_TagString: Untagged
@@ -94,8 +94,8 @@ MonoBehaviour:
   interactRadius: 3
   interactionTransform: {fileID: 4813311446664225101}
   item: {fileID: 11400000, guid: 66cf98c9881c3464f811403091a9d94c, type: 2}
---- !u!64 &-2909701815126392965
-MeshCollider:
+--- !u!65 &5785506917179587204
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,10 +104,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3, z: 2}
+  m_Center: {x: 0.3, y: 0, z: 0.5}
 --- !u!64 &2794600858113208675
 MeshCollider:
   m_ObjectHideFlags: 0
