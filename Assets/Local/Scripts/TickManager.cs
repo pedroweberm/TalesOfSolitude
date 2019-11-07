@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class TickManager : MonoBehaviour
 {
+    #region Singleton
+    public static TickManager global;
+
+    void Awake()
+    {
+        if (global != null)
+        {
+            Debug.LogWarning("More than 1 TickManager");
+            return;
+        }
+        global = this;
+    }
+    #endregion
 
     public float tickDuration = 5.0f;
 
     [System.NonSerialized]
     public int tickCount = 0;
 
-    private float timeCount = 0.0f;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        InvokeRepeating("IncrementTicks", tickDuration, tickDuration);
     }
 
-    // Update is called once per frame
-    void Update()
+    void IncrementTicks()
     {
-        timeCount += Time.deltaTime;
-
-        if (timeCount >= tickDuration)
-        {
-            timeCount = 0;
-            tickCount++;
-            Debug.Log(tickCount);
-        }
+        tickCount++;
     }
 }

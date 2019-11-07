@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public GameObject animal;
-    public float spawnTime = 5;
+    public int spawnTime = 5;
     public int maxAlive = 5;
     public float minScale = 1.0f;
     public float maxScale = 1.0f;
@@ -15,7 +15,7 @@ public class SpawnPoint : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", spawnTime * TickManager.global.tickDuration, spawnTime * TickManager.global.tickDuration);
     }
 
     void Spawn()
