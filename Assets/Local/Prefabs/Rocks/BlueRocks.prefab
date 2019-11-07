@@ -130,8 +130,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7333845016724909496}
-  - component: {fileID: -7737227667188183363}
   - component: {fileID: 3918646071976236832}
+  - component: {fileID: 6593455945525834882}
   m_Layer: 0
   m_Name: BlueRocks
   m_TagString: Untagged
@@ -160,20 +160,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &-7737227667188183363
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4581117901798811078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!114 &3918646071976236832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +175,19 @@ MonoBehaviour:
   interactRadius: 3
   interactionTransform: {fileID: 7333845016724909496}
   item: {fileID: 11400000, guid: 66cf98c9881c3464f811403091a9d94c, type: 2}
+--- !u!65 &6593455945525834882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581117901798811078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 3.2}
+  m_Center: {x: -0.4, y: 0, z: 0.5}
 --- !u!1001 &258251010831504136
 PrefabInstance:
   m_ObjectHideFlags: 0

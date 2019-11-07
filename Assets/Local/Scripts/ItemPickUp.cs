@@ -7,18 +7,12 @@ public class ItemPickUp : Interactable
     {
         base.Interact();
 
-        if (interactionTransform == null)
-        {
-            interactionTransform = transform;
-        }
-
-
         PickUp();
     }
 
     void PickUp()
     {
-        Debug.Log("Picking up" + item.name);
+        Debug.Log("Picking up " + item.name);
         Destroy(gameObject);
     }
 }
