@@ -27,6 +27,8 @@ public class SpawnPoint : MonoBehaviour
 
             float spawnPosX = Random.Range(-spawnRadius, spawnRadius);
             float spawnPosZ = Random.Range(-spawnRadius, spawnRadius);
+
+            animal.GetComponent<AnimalController>().home = this;
  
             Instantiate(animal, transform.position + new Vector3(spawnPosX, transform.position.y, spawnPosZ), transform.rotation);
             livingAnimals++;

@@ -1599,6 +1599,7 @@ GameObject:
   - component: {fileID: 114425080544000304}
   - component: {fileID: 114389504973745632}
   - component: {fileID: 195671168443570934}
+  - component: {fileID: 6932678872317559093}
   m_Layer: 0
   m_Name: Horse_wander
   m_TagString: Untagged
@@ -1615,7 +1616,7 @@ Transform:
   m_GameObject: {fileID: 1847083141549040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6111736, y: 3.6111736, z: 3.6111736}
+  m_LocalScale: {x: 3.4700363, y: 3.4700363, z: 3.4700363}
   m_Children:
   - {fileID: 4362255668871490}
   m_Father: {fileID: 0}
@@ -1849,7 +1850,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1847083141549040}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1862,6 +1863,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6932678872317559093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847083141549040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a80c6c7c08d3147981c2db4f017a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: {fileID: 0}
 --- !u!1 &1862758366271582
 GameObject:
   m_ObjectHideFlags: 0
