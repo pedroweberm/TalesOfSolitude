@@ -34,3 +34,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/GitHub.meta
+Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll
+Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll.meta
