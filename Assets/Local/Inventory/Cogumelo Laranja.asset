@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62ca7148cf2ea13489954f0c480d0621, type: 3}
-  m_Name: Cogume Laranja
+  m_Name: Cogumelo Laranja
   m_EditorClassIdentifier: 
   item_name: Cogumelo Laranja
   icon: {fileID: 0}
