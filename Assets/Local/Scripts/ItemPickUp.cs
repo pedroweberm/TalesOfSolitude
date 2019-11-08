@@ -13,6 +13,17 @@ public class ItemPickUp : Interactable
     void PickUp()
     {
         Debug.Log("Picking up " + item.name);
+        if (item.name == "Stone") {
+            Inventory.instance.IncreaseStoneAmount(1);
+        }
+        else if (item.name == "Wood") {
+            Inventory.instance.IncreaseWoodAmount(1);
+        }
+        else
+        {
+            Inventory.instance.Add(item);
+        }
+        
         Destroy(gameObject);
     }
 }
