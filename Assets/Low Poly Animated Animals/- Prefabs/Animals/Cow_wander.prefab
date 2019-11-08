@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 1244760467543844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3172076, y: 3.3172076, z: 3.3172076}
+  m_LocalScale: {x: 2.8118367, y: 2.8118367, z: 2.8118367}
   m_Children:
   - {fileID: 4427839542157034}
   m_Father: {fileID: 0}
@@ -711,12 +711,12 @@ MonoBehaviour:
   - stateName: Walking
     animationBool: isWalking
     maxStateTime: 10
-    moveSpeed: 1
+    moveSpeed: 4
     turnSpeed: 100
   - stateName: Running
     animationBool: isRunning
     maxStateTime: 10
-    moveSpeed: 3
+    moveSpeed: 8
     turnSpeed: 200
   attackingStates: []
   deathStates:
