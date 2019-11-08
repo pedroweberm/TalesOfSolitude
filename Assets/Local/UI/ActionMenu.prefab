@@ -124,11 +124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3609490392513025437}
     m_Modifications:
-    - target: {fileID: 6596254548021545696, guid: b3f759bf22fe2b543aa065484f744d58,
-        type: 3}
-      propertyPath: m_Name
-      value: ActionButton
-      objectReference: {fileID: 0}
     - target: {fileID: 726669389762794047, guid: b3f759bf22fe2b543aa065484f744d58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,6 +228,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596254548021545696, guid: b3f759bf22fe2b543aa065484f744d58,
+        type: 3}
+      propertyPath: m_Name
+      value: ActionButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 223711916691838331, guid: b3f759bf22fe2b543aa065484f744d58,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223711916691838331, guid: b3f759bf22fe2b543aa065484f744d58,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223711916691838331, guid: b3f759bf22fe2b543aa065484f744d58,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223711916691838331, guid: b3f759bf22fe2b543aa065484f744d58,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f759bf22fe2b543aa065484f744d58, type: 3}
