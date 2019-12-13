@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (followTarget != null)
         {
-            Debug.Log(followTarget.transform.name);
+            //Debug.Log(followTarget.transform.name);
             playerAgent.SetDestination(followTarget.position);
             FaceTarget();
         }

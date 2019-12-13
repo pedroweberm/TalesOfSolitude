@@ -30,7 +30,7 @@ namespace PolyPerfect
         AIStats stats;
 
         [SerializeField, Tooltip("How far away from it's origin this animal will wander by itself.")]
-        private float wanderZone = 10f;
+        public float wanderZone = 10f;
         public float MaxDistance
         {
             get

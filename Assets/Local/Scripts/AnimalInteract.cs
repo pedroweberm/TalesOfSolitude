@@ -10,7 +10,6 @@ public class AnimalInteract : Interactable
         base.Interact();
 
         CombatManager.instance.EnterCombat(this.gameObject);
-
     }
 
 }
