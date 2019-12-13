@@ -499,7 +499,7 @@ MonoBehaviour:
     name: rock_m
   - gameObject: {fileID: 100000, guid: 17eb8069e0cfc124c810ac10563fd980, type: 3}
     settings:
-      m_Strength: 5
+      m_Strength: 98.40323
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -580,7 +580,7 @@ MonoBehaviour:
     name: Tree Blue 1
   - gameObject: {fileID: 100000, guid: 81da8289411ff4c4a9b218ba845e7df3, type: 3}
     settings:
-      m_Strength: 20
+      m_Strength: 96.40727
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
