@@ -1599,7 +1599,7 @@ GameObject:
   - component: {fileID: 114425080544000304}
   - component: {fileID: 114389504973745632}
   - component: {fileID: 195671168443570934}
-  - component: {fileID: 6932678872317559093}
+  - component: {fileID: 6954085374535462615}
   m_Layer: 0
   m_Name: Horse_wander
   m_TagString: Untagged
@@ -1616,7 +1616,7 @@ Transform:
   m_GameObject: {fileID: 1847083141549040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5552847, y: 3.5552847, z: 3.5552847}
+  m_LocalScale: {x: 3.5318384, y: 3.5318384, z: 3.5318384}
   m_Children:
   - {fileID: 4362255668871490}
   m_Father: {fileID: 0}
@@ -1850,7 +1850,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1847083141549040}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.5
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1863,7 +1863,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6932678872317559093
+--- !u!114 &6954085374535462615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

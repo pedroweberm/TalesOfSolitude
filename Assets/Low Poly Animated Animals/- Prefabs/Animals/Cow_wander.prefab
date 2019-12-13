@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 114332741007667790}
   - component: {fileID: 114009100225796694}
   - component: {fileID: 195059093664485922}
-  - component: {fileID: -2920392131776898380}
+  - component: {fileID: 6623454086621962816}
   m_Layer: 0
   m_Name: Cow_wander
   m_TagString: Untagged
@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 1244760467543844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7771153, y: 2.7771153, z: 2.7771153}
+  m_LocalScale: {x: 2.5112433, y: 2.5112433, z: 2.5112433}
   m_Children:
   - {fileID: 4427839542157034}
   m_Father: {fileID: 0}
@@ -765,7 +765,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1244760467543844}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -778,7 +778,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-2920392131776898380
+--- !u!114 &6623454086621962816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
