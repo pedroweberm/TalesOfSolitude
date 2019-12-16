@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
         transform.position = new Vector3(target.position.x, target.position.y + 58, target.position.z - 63);
 
         offset = transform.position - target.position;
+
+        transform.LookAt(target);
     }
 
     void FixedUpdate()
@@ -24,8 +26,6 @@ public class CameraController : MonoBehaviour
             Vector3 targetCamPos = target.position + offset;
 
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
-
-            transform.LookAt(target);
         }
         
     }
@@ -45,7 +45,7 @@ public class CameraController : MonoBehaviour
 
     public void ReturnFromFixed()
     {
-
+        transform.LookAt(target);
         isFixed = false;
 
     }
