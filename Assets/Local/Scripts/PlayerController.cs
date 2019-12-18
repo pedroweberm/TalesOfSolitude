@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
                 Interactable interactableHit = hitInfo.collider.GetComponent<Interactable>();
                 if (interactableHit != null)
                 {
-                    SetFocus(interactableHit);
+                    interactableHit.Interact();
                 }
             }
         }
