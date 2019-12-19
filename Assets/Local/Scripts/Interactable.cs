@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum InteractionType
+{
+    None,
+    SoftChop,
+    HardChop,
+    Water,
+    Mine,
+    Destroy,
+}
+
 public class Interactable : MonoBehaviour
 {
     public float interactRadius = 3.0f;

@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-enum InteractionType
-{
-    None,
-    SoftChop,
-    HardChop,
-    Water,
-}
-
 [RequireComponent(typeof(TreeController))]
 public class InteractableTree : Interactable
 {
