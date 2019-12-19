@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(TreeController))]
 public class InteractableRock : Interactable
 {
     public GameObject actionMenu;
 
+    RockController rockController;
     Transform uiCanvas;
     Transform uiPanel;
 
@@ -16,6 +18,8 @@ public class InteractableRock : Interactable
 
     private void Start()
     {
+        rockController = GetComponent<RockController>();
+
         uiCanvas = transform.GetChild(0);
         uiPanel = uiCanvas.GetChild(0);
 
@@ -32,10 +36,10 @@ public class InteractableRock : Interactable
         switch (interactionType)
         {
             case InteractionType.Mine:
-                Debug.Log("Mining");
+                rockController.Mine();
                 break;
             case InteractionType.Destroy:
-                Debug.Log("Destroying");
+                rockController.Destroy();
                 break;
         }
     }
