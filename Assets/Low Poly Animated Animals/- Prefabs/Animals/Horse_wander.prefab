@@ -1601,6 +1601,7 @@ GameObject:
   - component: {fileID: 114389504973745632}
   - component: {fileID: 195671168443570934}
   - component: {fileID: 6954085374535462615}
+  - component: {fileID: -7040388457850472671}
   m_Layer: 0
   m_Name: Horse_wander
   m_TagString: Untagged
@@ -1617,7 +1618,7 @@ Transform:
   m_GameObject: {fileID: 1847083141549040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3981175, y: 3.3981175, z: 3.3981175}
+  m_LocalScale: {x: 3.293613, y: 3.293613, z: 3.293613}
   m_Children:
   - {fileID: 4362255668871490}
   m_Father: {fileID: 0}
@@ -1891,6 +1892,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   home: {fileID: 0}
+--- !u!114 &-7040388457850472671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847083141549040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1461058b5cbb9a44872b208d767b92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Horse
+  maxHp: 75
+  currentHp: 75
+  unitLvl: 0
+  dmg: 5
+  heal: 2
 --- !u!1 &1862758366271582
 GameObject:
   m_ObjectHideFlags: 0
