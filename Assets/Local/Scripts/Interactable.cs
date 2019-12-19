@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
     public float interactRadius = 3.0f;
     public Transform interactionTransform;
 
-    bool isFocused = false;
+    protected bool isFocused = false;
     Transform player;
 
     bool interacted = false;
@@ -16,6 +16,12 @@ public class Interactable : MonoBehaviour
     {
         // Scripts de outros objetos vao sobrescrever este metodo
         Debug.Log("Interacting with " + transform.name);
+    }
+
+    public virtual void openMenu()
+    {
+        // Scripts de outros objetos vao sobrescrever este metodo
+        Debug.Log("Open interaction menu of " + transform.name);
     }
 
     private void Awake()

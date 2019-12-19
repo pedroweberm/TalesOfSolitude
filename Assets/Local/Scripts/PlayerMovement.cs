@@ -27,9 +27,9 @@ public class PlayerMovement : MonoBehaviour
         playerRunning = !(playerAgent.remainingDistance <= playerAgent.stoppingDistance);
         playerAnimator.SetBool("running", playerRunning);
         
-        if (followTarget != null && followTarget.position != playerAgent.destination)
+        if (followTarget != null)
         {
-            Debug.Log(followTarget.transform.name);
+            //Debug.Log(followTarget.transform.name);
             playerAgent.SetDestination(followTarget.position);
             FaceTarget();
         }

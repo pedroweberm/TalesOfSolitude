@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 
 [RequireComponent(typeof(PlayerMovement))]
@@ -12,13 +13,24 @@ public class PlayerController : MonoBehaviour
 
     PlayerMovement playerMovement;
 
-    // Start is called before the first frame update
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Debug.Log("Trying to create more than 1 player controller");
+        }
+    }
+
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -26,12 +38,20 @@ public class PlayerController : MonoBehaviour
             Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(clickRay, out hitInfo, 300, groundLayer))
+            if (EventSystem.current.IsPointerOverGameObject())
             {
-                playerMovement.MoveToPoint(hitInfo.point);
-
-                RemoveFocus();
+                Debug.Log("Clicked on the UI");
             }
+            else
+            {
+                if (Physics.Raycast(clickRay, out hitInfo, 300, groundLayer))
+                {
+                    playerMovement.MoveToPoint(hitInfo.point);
+
+                    RemoveFocus();
+                }
+            }
+
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -50,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetFocus(Interactable newFocus)
+    private void SetFocus(Interactable newFocus)
     {
         if (newFocus != currentFocus)
         {
@@ -58,17 +78,28 @@ public class PlayerController : MonoBehaviour
                 currentFocus.onDefocused();
 
             currentFocus = newFocus;
-            playerMovement.FollowTarget(newFocus);
+            Debug.Log("New focus " + currentFocus.transform.name);
         }
         newFocus.onFocused(transform);
     }
 
     void RemoveFocus()
     {
+        Debug.Log("remove");
         if (currentFocus != null)
             currentFocus.onDefocused();
 
         currentFocus = null;
         playerMovement.StopFollowing();
+    }
+
+    public void FollowFocus(Interactable target)
+    {
+        Debug.Log("Follow " + target.transform.name + "current " + currentFocus.transform.name);
+        if (currentFocus != null)
+            if (target == currentFocus)
+                playerMovement.FollowTarget(currentFocus);
+            else
+                Debug.Log("Trying to follow target that is not focused");
     }
 }
