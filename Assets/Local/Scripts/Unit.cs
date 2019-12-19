@@ -8,8 +8,12 @@ public class Unit : MonoBehaviour
     public float maxHp;
     public float currentHp;
     public int unitLvl;
+    public Item drop;
+    public int amountDropped;
+
 
     public float dmg;
+    public float baseDmg;
     public float heal;
 
     public bool TakeDamage(float dmg)

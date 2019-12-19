@@ -1215,6 +1215,9 @@ MonoBehaviour:
   unitName: CHIHUAHUAHUAHUAHUAHUA
   maxHp: 999
   currentHp: 999
+  unitLvl: 999
+  drop: {fileID: 0}
+  amountDropped: 0
   dmg: 500
   heal: 500
 --- !u!1 &1451636307177142

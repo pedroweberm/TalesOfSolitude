@@ -2442,7 +2442,11 @@ MonoBehaviour:
   unitName: Gorilla
   maxHp: 100
   currentHp: 100
+  unitLvl: 0
+  drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
+  amountDropped: 0
   dmg: 7
+  baseDmg: 7
   heal: 3
 --- !u!1 &1796313935255756
 GameObject:
