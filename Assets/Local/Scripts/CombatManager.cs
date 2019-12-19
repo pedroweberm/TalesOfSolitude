@@ -85,7 +85,7 @@ public class CombatManager : MonoBehaviour
 
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYER && state == BattleState.PLAYERCHOSE)
+        if (state != BattleState.PLAYER || state == BattleState.PLAYERCHOSE)
         {
             return;
         }
@@ -96,7 +96,7 @@ public class CombatManager : MonoBehaviour
 
     public void OnHealButton()
     {
-        if (state != BattleState.PLAYER && state == BattleState.PLAYERCHOSE)
+        if (state != BattleState.PLAYER || state == BattleState.PLAYERCHOSE)
         {
             return;
         }
