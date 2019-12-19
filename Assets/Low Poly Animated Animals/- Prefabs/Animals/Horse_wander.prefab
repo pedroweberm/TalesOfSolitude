@@ -1907,8 +1907,11 @@ MonoBehaviour:
   unitName: Horse
   maxHp: 75
   currentHp: 75
-  unitLvl: 0
-  dmg: 5
+  unitLvl: 32
+  drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
+  amountDropped: 3
+  dmg: 6.6
+  baseDmg: 5
   heal: 2
 --- !u!1 &1862758366271582
 GameObject:
