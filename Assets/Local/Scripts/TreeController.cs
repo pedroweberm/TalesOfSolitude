@@ -11,6 +11,8 @@ public class TreeController : MonoBehaviour
 
     public int softChopPenalty = 2;
     public int hardChopPenalty = 5;
+    public int waterReward = 1;
+    public int waterCost = 5;
 
     public float interactableRadius = 3.0f;
 
@@ -29,6 +31,7 @@ public class TreeController : MonoBehaviour
     public void HardChop()
     {
         DestroyTree();
+        PlayerStats.instance.ChangeSync(-hardChopPenalty);
         Inventory.instance.IncreaseWoodAmount(treeHardChopReward);
     }
 
@@ -36,6 +39,7 @@ public class TreeController : MonoBehaviour
     {
         lastChopTick = TickManager.global.tickCount;
         softChopCount++;
+        PlayerStats.instance.ChangeSync(-softChopPenalty);
 
         Inventory.instance.IncreaseWoodAmount(treeSoftChopReward);
         if (softChopCount >= softChopThreshold)
@@ -46,7 +50,12 @@ public class TreeController : MonoBehaviour
 
     public void Water()
     {
-
+        if (softChopCount > 0)
+        {
+            PlayerStats.instance.ChangeSync(waterReward);
+            softChopCount--;
+            PlayerStats.instance.playerCurrentThirst -= waterCost;
+        }
     }
 
     void DestroyTree()

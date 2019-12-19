@@ -111,6 +111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeHardChopReward: 15
   treeSoftChopReward: 5
+  softChopThreshold: 5
+  chopRestoreTime: 5
+  softChopPenalty: 2
+  hardChopPenalty: 5
+  waterReward: 1
+  waterCost: 10
   interactableRadius: 3
 --- !u!114 &-2624941692714581997
 MonoBehaviour:
