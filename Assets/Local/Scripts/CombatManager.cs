@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using PolyPerfect;
 using TMPro;
-public enum BattleState { START, PLAYER, ENEMY, WON, LOST, PLAYERCHOSE }
+public enum BattleState { START, PLAYER, ENEMY, WON, LOST, PLAYERCHOSE, RUN }
 public class CombatManager : MonoBehaviour
 {
     public BattleState state;
@@ -14,6 +14,7 @@ public class CombatManager : MonoBehaviour
     public TMP_Text playerNameText;
 
     public static CombatManager instance;
+    public GameObject UIPanel;
     public GameObject animal = null;
     public GameObject combatAnimal = null;
     public GameObject mainCamera;
@@ -47,6 +48,7 @@ public class CombatManager : MonoBehaviour
     public IEnumerator EnterCombat(GameObject targetAnimal)
     {
         //Debug.Log("entre combat");
+        UIPanel.SetActive(false);
         animal = targetAnimal;
         isCombat = true;
 
@@ -83,6 +85,16 @@ public class CombatManager : MonoBehaviour
 
     }
 
+    public void OnRunButton()
+    {
+        if (state != BattleState.PLAYER || state == BattleState.PLAYERCHOSE)
+        {
+            return;
+        }
+
+        state = BattleState.RUN;
+        StartCoroutine(PlayerRun());
+    }
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYER || state == BattleState.PLAYERCHOSE)
@@ -104,18 +116,31 @@ public class CombatManager : MonoBehaviour
         state = BattleState.PLAYERCHOSE;
         StartCoroutine(PlayerHeal());
     }
+    IEnumerator PlayerRun()
+    {
+        dialogueText.text = "You ran away!";
 
+        yield return new WaitForSeconds(2f);
+
+        Destroy(combatAnimal);
+        mainCamera.GetComponent<CameraController>().ReturnFromFixed();
+
+        isCombat = false;
+
+        UIPanel.SetActive(true);
+        combatCanvas.SetActive(false);
+    }
     IEnumerator PlayerAttack()
     {
-        if (PlayerStats.instance.unitLvl < -40)
+        if (PlayerStats.instance.unitLvl < 10)
         {
             PlayerStats.instance.dmgMult = 2f;
         }
-        else if (PlayerStats.instance.unitLvl < -25)
+        else if (PlayerStats.instance.unitLvl < 25)
         {
             PlayerStats.instance.dmgMult = 1.5f;
         }
-        else if (PlayerStats.instance.unitLvl < -10)
+        else if (PlayerStats.instance.unitLvl < 40)
         {
             PlayerStats.instance.dmgMult = 1.2f;
         }
@@ -141,7 +166,7 @@ public class CombatManager : MonoBehaviour
 
         enemyHUD.SetHP(enemy.currentHp);
 
-        dialogueText.text = (PlayerStats.instance.dmg * PlayerStats.instance.dmgMult).ToString() + " damage dealt!";
+        dialogueText.text = (PlayerStats.instance.dmg * PlayerStats.instance.dmgMult).ToString("F2") + " damage dealt!";
 
         yield return new WaitForSeconds(2f);
 
@@ -162,15 +187,19 @@ public class CombatManager : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        if (PlayerStats.instance.unitLvl > 40)
+        if (PlayerStats.instance.unitLvl == 100)
+        {
+            PlayerStats.instance.healMult = 3f;
+        }
+        else if (PlayerStats.instance.unitLvl > 90)
         {
             PlayerStats.instance.healMult = 2f;
         }
-        else if (PlayerStats.instance.unitLvl > 25)
+        else if (PlayerStats.instance.unitLvl > 75)
         {
             PlayerStats.instance.healMult = 1.5f;
         }
-        else if (PlayerStats.instance.unitLvl > 10)
+        else if (PlayerStats.instance.unitLvl > 60)
         {
             PlayerStats.instance.healMult = 1.2f;
         }
@@ -196,7 +225,7 @@ public class CombatManager : MonoBehaviour
 
         playerHUD.SetHP(PlayerStats.instance.currentHp);
 
-        dialogueText.text = (PlayerStats.instance.heal * PlayerStats.instance.healMult).ToString() + " HP restored!";
+        dialogueText.text = (PlayerStats.instance.heal * PlayerStats.instance.healMult).ToString("F2") + " HP restored!";
 
         yield return new WaitForSeconds(2f);
 
@@ -227,7 +256,7 @@ public class CombatManager : MonoBehaviour
         else
         {
             bool isDead = PlayerStats.instance.TakeDamage(enemy.dmg);
-            dialogueText.text = "Enemy dealt " + enemy.heal.ToString() + " damage.";
+            dialogueText.text = "Enemy dealt " + enemy.dmg.ToString("F2") + " damage.";
             playerHUD.SetHP(PlayerStats.instance.currentHp);
 
             yield return new WaitForSeconds(2f);
@@ -248,7 +277,6 @@ public class CombatManager : MonoBehaviour
 
         
     }
-
 
 
     IEnumerator LeaveCombat()
@@ -276,6 +304,8 @@ public class CombatManager : MonoBehaviour
         mainCamera.GetComponent<CameraController>().ReturnFromFixed();
 
         isCombat = false;
+
+        UIPanel.SetActive(true);
         
         combatCanvas.SetActive(false);
     }
