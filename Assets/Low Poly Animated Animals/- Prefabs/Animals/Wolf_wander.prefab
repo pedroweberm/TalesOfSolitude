@@ -5480,9 +5480,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Wolf
-  maxHp: 60
-  currentHp: 60
+  maxHp: 50
+  currentHp: 50
+  unitLvl: 0
+  drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
+  amountDropped: 0
   dmg: 8
+  baseDmg: 8
   heal: 3
 --- !u!1 &1557030355682406
 GameObject:

@@ -132,7 +132,11 @@ public class CombatManager : MonoBehaviour
     }
     IEnumerator PlayerAttack()
     {
-        if (PlayerStats.instance.unitLvl < 10)
+        if (PlayerStats.instance.unitLvl == 0)
+        {
+            PlayerStats.instance.dmgMult = 3f;
+        }
+        else if (PlayerStats.instance.unitLvl < 10)
         {
             PlayerStats.instance.dmgMult = 2f;
         }
@@ -285,9 +289,37 @@ public class CombatManager : MonoBehaviour
         if (state == BattleState.WON)
         {
             dialogueText.text = "You won!";
-            
-            Destroy(animal);
+
             yield return new WaitForSeconds(2f);
+
+            Destroy(animal);
+            int i = 0;
+            bool fullInv;
+
+            dialogueText.text = "Enemy dropped " + enemy.amountDropped.ToString() + " " + enemy.drop.item_name + ".";
+
+            yield return new WaitForSeconds(2f);
+
+            for (i = 0; i < enemy.amountDropped; i++)
+            {
+                fullInv = Inventory.instance.Add(enemy.drop);
+                
+                if (fullInv)
+                {
+                    dialogueText.text = "Added " + (i+1).ToString() + " to inventory.";
+
+                    yield return new WaitForSeconds(0.5f);
+                }
+                else
+                {
+                    dialogueText.text = "Your inventory is full.";
+
+                    break;
+                }
+            }
+
+            yield return new WaitForSeconds(2f);
+
         }
         else if (state == BattleState.LOST)
         {
@@ -298,7 +330,7 @@ public class CombatManager : MonoBehaviour
             Application.Quit();
         }
 
-        PlayerStats.instance.unitLvl -= 1;
+        PlayerStats.instance.ChangeSync(-1);
 
         Destroy(combatAnimal);
         mainCamera.GetComponent<CameraController>().ReturnFromFixed();

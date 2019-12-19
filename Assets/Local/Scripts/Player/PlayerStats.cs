@@ -28,5 +28,18 @@ public class PlayerStats : Unit
         }
     }
 
+    public void ChangeSync(int amount)
+    {
+        instance.unitLvl += amount;
+
+        if (instance.unitLvl < 0)
+        {
+            instance.unitLvl = 0;
+        }
+        else if (instance.unitLvl > 100)
+        {
+            instance.unitLvl = 100;
+        }
+    }
 
 }
