@@ -8,20 +8,14 @@ public class Interactable : MonoBehaviour
     public Transform interactionTransform;
 
     protected bool isFocused = false;
-    Transform player;
+    protected bool interacted = false;
 
-    bool interacted = false;
+    Transform player;
 
     public virtual void Interact()
     {
         // Scripts de outros objetos vao sobrescrever este metodo
         Debug.Log("Interacting with " + transform.name);
-    }
-
-    public virtual void openMenu()
-    {
-        // Scripts de outros objetos vao sobrescrever este metodo
-        Debug.Log("Open interaction menu of " + transform.name);
     }
 
     private void Awake()
@@ -32,11 +26,12 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (isFocused && !interacted)
         {
             float distance = Vector3.Distance(player.position, interactionTransform.position);
+            Debug.Log("distancia " + distance + " radius " + interactRadius);
             if (distance <= interactRadius)
             {
                 Interact();
