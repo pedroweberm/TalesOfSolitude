@@ -270,6 +270,8 @@ public class CombatManager : MonoBehaviour
             Application.Quit();
         }
 
+        PlayerStats.instance.unitLvl -= 1;
+
         Destroy(combatAnimal);
         mainCamera.GetComponent<CameraController>().ReturnFromFixed();
 
