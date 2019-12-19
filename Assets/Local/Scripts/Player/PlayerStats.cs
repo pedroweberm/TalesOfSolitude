@@ -9,6 +9,13 @@ public class PlayerStats : Unit
     public float dmgMult;
     public float healMult;
 
+    public float playerCurrentHunger;
+    public float playerCurrentThirst;
+
+    public float playerStartingHunger;
+    public float playerStartingThirst;
+    
+
     private void Awake()
     {
         if (instance == null)
