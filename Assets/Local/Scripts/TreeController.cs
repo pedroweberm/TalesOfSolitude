@@ -14,8 +14,8 @@ public class TreeController : MonoBehaviour
 
     public float interactableRadius = 3.0f;
 
-    public int softChopCount = 0;
-    public int lastChopTick;
+    int softChopCount = 0;
+    int lastChopTick;
 
     private void Update()
     {
