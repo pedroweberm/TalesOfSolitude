@@ -677,7 +677,11 @@ MonoBehaviour:
   unitName: Elephant
   maxHp: 200
   currentHp: 200
+  unitLvl: 0
+  drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
+  amountDropped: 10
   dmg: 12
+  baseDmg: 12
   heal: 6
 --- !u!1 &1306487443538434
 GameObject:

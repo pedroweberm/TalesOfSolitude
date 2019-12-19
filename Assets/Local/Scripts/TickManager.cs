@@ -18,7 +18,7 @@ public class TickManager : MonoBehaviour
     }
     #endregion
 
-    public float tickDuration = 1.0f;
+    public float tickDuration = 2.0f;
 
     [System.NonSerialized]
     public int tickCount = 0;

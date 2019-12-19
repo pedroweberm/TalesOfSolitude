@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -21,12 +22,22 @@ public class Inventory : MonoBehaviour
     #endregion
 
     public List<Item> items = new List<Item>();
+    public int max_items;
     public int stone_amount;
     public int wood_amount;
 
-    public void Add (Item item)
+    public bool Add (Item item)
     {
-        items.Add(item);
+        if ( items.Count < max_items )
+        {
+            items.Add(item);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 
     public void Remove (Item item)

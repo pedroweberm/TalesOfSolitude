@@ -9,6 +9,13 @@ public class PlayerStats : Unit
     public float dmgMult;
     public float healMult;
 
+    public float playerCurrentHunger;
+    public float playerCurrentThirst;
+
+    public float playerStartingHunger;
+    public float playerStartingThirst;
+    
+
     private void Awake()
     {
         if (instance == null)
@@ -21,5 +28,18 @@ public class PlayerStats : Unit
         }
     }
 
+    public void ChangeSync(int amount)
+    {
+        instance.unitLvl += amount;
+
+        if (instance.unitLvl < 0)
+        {
+            instance.unitLvl = 0;
+        }
+        else if (instance.unitLvl > 100)
+        {
+            instance.unitLvl = 100;
+        }
+    }
 
 }

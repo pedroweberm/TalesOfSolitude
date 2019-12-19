@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerNecessities : MonoBehaviour
 {
-    public int playerInitialHealth = 1000;
-    public int playerMinHealth = 100;
-    public float playerInitialHunger = 100;
-    public float playerInitialThirst = 100;
-    public float playerInitialSynchrony = 100;
-    public int starvingDamage = 10;
-    public int thirstyDamage = 50;
+    public float playerInitialHealth = PlayerStats.instance.maxHp;
+    //public int playerMinHealth = 100;
+    public float playerInitialHunger = PlayerStats.instance.playerStartingHunger;
+    public float playerInitialThirst = PlayerStats.instance.playerStartingThirst;
+    public float playerInitialSynchrony = 0;
+    public int starvingDamage = 1;
+    public int thirstyDamage = 3;
 
     private float playerHealth;
     private float playerMaxHealth;
@@ -44,14 +42,14 @@ public class PlayerNecessities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = playerInitialHealth;
-        playerMaxHealth = playerInitialHealth;
+        playerHealth = PlayerStats.instance.currentHp;
+        playerMaxHealth = PlayerStats.instance.maxHp;
 
-        playerHunger = playerInitialHunger;
-        playerThirst = playerInitialThirst;
-        playerSynchrony = playerInitialSynchrony;
-        goodSynchrony = playerSynchrony >= 50;
-        badSynchrony = playerSynchrony < 50;
+        playerHunger = PlayerStats.instance.playerCurrentHunger;
+        playerThirst = PlayerStats.instance.playerCurrentThirst;
+        playerSynchrony = PlayerStats.instance.unitLvl;
+        goodSynchrony = playerSynchrony >= 0;
+        badSynchrony = playerSynchrony < 0;
 
         currentTick = TickManager.global.tickCount;
 
@@ -65,48 +63,63 @@ public class PlayerNecessities : MonoBehaviour
 
         UpdateHunger(0);
         UpdateThirst(0);
-
         CheckNecessities();
+
+        playerHealth = PlayerStats.instance.currentHp;
+        playerHunger = PlayerStats.instance.playerCurrentHunger;
+        playerThirst = PlayerStats.instance.playerCurrentThirst;
+        playerSynchrony = PlayerStats.instance.unitLvl;
+        goodSynchrony = playerSynchrony >= 0;
+        badSynchrony = playerSynchrony < 0;
+
         UpdateUI();
     }
 
-    void UpdateHealth(int amount)
+    void UpdateHealth(float amount)
     {
-        playerHealth += amount;
+        PlayerStats.instance.currentHp += amount;
+        playerHealth = PlayerStats.instance.currentHp;
 
         if (playerHealth <= 0)
         {
             Die();
         }
+        if (playerHealth >= playerMaxHealth)
+        {
+            playerHealth = playerMaxHealth;
+            PlayerStats.instance.currentHp = playerMaxHealth;
+        }
     }
 
-    bool UpdateMaxHealth(int amount)
-    {
-        if (playerMaxHealth + amount >= playerMinHealth)
-        {
-            playerMaxHealth += amount;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+    //bool updatemaxhealth(int amount)
+    //{
+    //    if (playermaxhealth + amount >= playerminhealth)
+    //    {
+    //        playermaxhealth += amount;
+    //        return true;
+    //    }
+    //    else
+    //    {
+    //        return false;
+    //    }
 
-    }
+    //}
 
     void UpdateHunger(int amount)
     {
-        playerHunger += amount;
+        PlayerStats.instance.playerCurrentHunger += amount;
 
         if (currentTick > lastHungerTick)
         {
             lastHungerTick = currentTick;
-            playerHunger -= 1;
-            UpdateSynchrony(-10);
+            PlayerStats.instance.playerCurrentHunger -= 1;
+            playerHunger = PlayerStats.instance.playerCurrentHunger;
         }
         if (playerHunger <= 0)
         {
             playerStarving = true;
+            PlayerStats.instance.playerCurrentHunger = 0;
+            playerHunger = PlayerStats.instance.playerCurrentHunger;
         }
     }
 
@@ -117,17 +130,33 @@ public class PlayerNecessities : MonoBehaviour
         if (currentTick > lastThirstTick)
         {
             lastThirstTick = currentTick;
-            playerThirst -= 1;
+            PlayerStats.instance.playerCurrentThirst -= 2;
+            playerThirst = PlayerStats.instance.playerCurrentThirst;
+
         }
         if (playerThirst <= 0)
         {
             playerThirsty = true;
+            PlayerStats.instance.playerCurrentThirst = 0;
+            playerHunger = PlayerStats.instance.playerCurrentThirst;
         }
     }
 
-    void UpdateSynchrony(float amount)
+    void UpdateSynchrony(int amount)
     {
-        playerSynchrony += amount;
+        PlayerStats.instance.unitLvl += amount;
+        playerSynchrony += PlayerStats.instance.unitLvl;
+
+        if (playerSynchrony < 0)
+        {
+            PlayerStats.instance.unitLvl = 0;
+            playerSynchrony += PlayerStats.instance.unitLvl;
+        }
+        else if (playerSynchrony > 100)
+        {
+            PlayerStats.instance.unitLvl = 100;
+            playerSynchrony += PlayerStats.instance.unitLvl;
+        }
         goodSynchrony = playerSynchrony >= 50f;
         badSynchrony = playerSynchrony < 50f;
     }
@@ -165,13 +194,14 @@ public class PlayerNecessities : MonoBehaviour
         {
             badSynchronyBar.fillAmount = playerSynchrony / playerInitialSynchrony;
             goodSynchronyBar.fillAmount = 0f;
-            badIcon.SetActive(true);
             goodIcon.SetActive(false);
+            badIcon.SetActive(true);
         }
     }
 
     void Die()
     {
-        Debug.Log("Dead");
+        Application.Quit();
+        Debug.Log("Dead.");
     }
 }
