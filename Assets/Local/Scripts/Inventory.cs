@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-
+    #region SINGLETON
     public static Inventory instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Trying to create more than 1 inventory");
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    #endregion
+
     public List<Item> items = new List<Item>();
     public int stone_amount;
     public int wood_amount;
 
-    private void Awake()
-    {
-        instance = this;
-    }
     public void Add (Item item)
     {
         items.Add(item);

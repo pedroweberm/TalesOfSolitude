@@ -4,52 +4,25 @@ using UnityEngine;
 
 public class TreeController : MonoBehaviour
 {
-
-    public int treeHardChopTime = 5;
-    public int treeSoftChopTime = 2;
-
     public int treeHardChopReward = 15;
     public int treeSoftChopReward = 5;
 
     public float interactableRadius = 3.0f;
 
-    public TickManager tickManager;
-
-    bool isBeingChopped = false;
-    int chopStartTick = 0;
-    int timeToChop = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    public void HardChop()
     {
-        
+        DestroyTree();
+        Inventory.instance.IncreaseWoodAmount(treeHardChopReward);
     }
 
-    private void Update()
+    public void SoftChop()
     {
-        if (isBeingChopped)
-        {
-            if (tickManager.tickCount - chopStartTick >= timeToChop)
-            {
-                DestroyTree();
-            }
-        }
+        Inventory.instance.IncreaseWoodAmount(treeSoftChopReward);
     }
 
-    public void ChopTree(bool isHardChop)
+    public void Water()
     {
-        chopStartTick = tickManager.tickCount;
 
-        if (isHardChop)
-        {
-            timeToChop = treeHardChopTime;
-        }
-        else
-        {
-            timeToChop = treeSoftChopTime;
-        }
-
-        isBeingChopped = true;
     }
 
     public void DestroyTree()
