@@ -74,6 +74,8 @@ public class CombatManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        SetMult();
+
         state = BattleState.PLAYER;
         PlayerTurn();
     }
@@ -82,6 +84,57 @@ public class CombatManager : MonoBehaviour
     {
         dialogueText.text = "Choose an action: ";
         return;
+
+    }
+
+    void SetMult()
+    {
+
+        if (PlayerStats.instance.unitLvl == 0)
+        {
+            PlayerStats.instance.dmgMult = 3f;
+            PlayerStats.instance.healMult = 0.25f;
+        }
+        else if (PlayerStats.instance.unitLvl < 10)
+        {
+            PlayerStats.instance.dmgMult = 2f;
+            PlayerStats.instance.healMult = 0.5f;
+
+        }
+        else if (PlayerStats.instance.unitLvl < 25)
+        {
+            PlayerStats.instance.dmgMult = 1.5f;
+            PlayerStats.instance.healMult = 0.75f;
+
+        }
+        else if (PlayerStats.instance.unitLvl < 40)
+        {
+            PlayerStats.instance.dmgMult = 1.2f;
+        }
+        else if (PlayerStats.instance.unitLvl == 100)
+        {
+            PlayerStats.instance.healMult = 3f;
+            PlayerStats.instance.dmgMult = 0.5f;
+        }
+        else if (PlayerStats.instance.unitLvl > 90)
+        {
+            PlayerStats.instance.healMult = 2f;
+            PlayerStats.instance.dmgMult = 0.75f;
+
+        }
+        else if (PlayerStats.instance.unitLvl > 75)
+        {
+            PlayerStats.instance.healMult = 1.5f;
+        }
+        else if (PlayerStats.instance.unitLvl > 60)
+        {
+            PlayerStats.instance.healMult = 1.2f;
+        }
+        else
+        {
+            PlayerStats.instance.healMult = 1f;
+            PlayerStats.instance.dmgMult = 1f;
+        }
 
     }
 
@@ -132,26 +185,31 @@ public class CombatManager : MonoBehaviour
     }
     IEnumerator PlayerAttack()
     {
-        if (PlayerStats.instance.unitLvl == 0)
-        {
-            PlayerStats.instance.dmgMult = 3f;
-        }
-        else if (PlayerStats.instance.unitLvl < 10)
-        {
-            PlayerStats.instance.dmgMult = 2f;
-        }
-        else if (PlayerStats.instance.unitLvl < 25)
-        {
-            PlayerStats.instance.dmgMult = 1.5f;
-        }
-        else if (PlayerStats.instance.unitLvl < 40)
-        {
-            PlayerStats.instance.dmgMult = 1.2f;
-        }
-        else
-        {
-            PlayerStats.instance.dmgMult = 1f;
-        }
+        //if (PlayerStats.instance.unitLvl == 0)
+        //{
+        //    PlayerStats.instance.dmgMult = 3f;
+        //    PlayerStats.instance.healMult = 0.25f;
+        //}
+        //else if (PlayerStats.instance.unitLvl < 10)
+        //{
+        //    PlayerStats.instance.dmgMult = 2f;
+        //    PlayerStats.instance.healMult = 0.5f;
+
+        //}
+        //else if (PlayerStats.instance.unitLvl < 25)
+        //{
+        //    PlayerStats.instance.dmgMult = 1.5f;
+        //    PlayerStats.instance.healMult = 0.75f;
+
+        //}
+        //else if (PlayerStats.instance.unitLvl < 40)
+        //{
+        //    PlayerStats.instance.dmgMult = 1.2f;
+        //}
+        //else
+        //{
+        //    PlayerStats.instance.dmgMult = 1f;
+        //}
 
         int i = 0;
         float damage;
@@ -191,26 +249,30 @@ public class CombatManager : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        if (PlayerStats.instance.unitLvl == 100)
-        {
-            PlayerStats.instance.healMult = 3f;
-        }
-        else if (PlayerStats.instance.unitLvl > 90)
-        {
-            PlayerStats.instance.healMult = 2f;
-        }
-        else if (PlayerStats.instance.unitLvl > 75)
-        {
-            PlayerStats.instance.healMult = 1.5f;
-        }
-        else if (PlayerStats.instance.unitLvl > 60)
-        {
-            PlayerStats.instance.healMult = 1.2f;
-        }
-        else
-        {
-            PlayerStats.instance.healMult = 1f;
-        }
+        //if (PlayerStats.instance.unitLvl == 100)
+        //{
+        //    PlayerStats.instance.healMult = 3f;
+        //    PlayerStats.instance.dmgMult = 0.5f;
+
+        //}
+        //else if (PlayerStats.instance.unitLvl > 90)
+        //{
+        //    PlayerStats.instance.healMult = 2f;
+        //    PlayerStats.instance.dmgMult = 0.75f;
+
+        //}
+        //else if (PlayerStats.instance.unitLvl > 75)
+        //{
+        //    PlayerStats.instance.healMult = 1.5f;
+        //}
+        //else if (PlayerStats.instance.unitLvl > 60)
+        //{
+        //    PlayerStats.instance.healMult = 1.2f;
+        //}
+        //else
+        //{
+        //    PlayerStats.instance.healMult = 1f;
+        //}
 
         float heal;
         int i;
