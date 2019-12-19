@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 114009100225796694}
   - component: {fileID: 195059093664485922}
   - component: {fileID: 6623454086621962816}
+  - component: {fileID: -6292203073339418628}
   m_Layer: 0
   m_Name: Cow_wander
   m_TagString: Untagged
@@ -532,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 1244760467543844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.49518, y: 3.49518, z: 3.49518}
+  m_LocalScale: {x: 2.5361693, y: 2.5361693, z: 2.5361693}
   m_Children:
   - {fileID: 4427839542157034}
   m_Father: {fileID: 0}
@@ -806,6 +807,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   home: {fileID: 0}
+--- !u!114 &-6292203073339418628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244760467543844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1461058b5cbb9a44872b208d767b92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Cow
+  maxHp: 50
+  currentHp: 50
+  unitLvl: 0
+  dmg: 5
+  heal: 3
 --- !u!1 &1247043747989182
 GameObject:
   m_ObjectHideFlags: 0
