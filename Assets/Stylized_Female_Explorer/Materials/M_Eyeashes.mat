@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Eyeashes
-  m_Shader: {fileID: 4800000, guid: fa63a26b21f647f46ad30668de985c1d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9271e864ef20504479d70527f1b73721, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
