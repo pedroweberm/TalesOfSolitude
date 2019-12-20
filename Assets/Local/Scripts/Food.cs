@@ -12,6 +12,8 @@ public class Food : Item
     private int ticksCooking;
     public Food cookedDrop;
 
+    public new bool isFood = true;
+
     public void Cook()
     {
         if (ticksToCook == -1)
@@ -19,13 +21,8 @@ public class Food : Item
             return;
         }
 
-        ticksCooking += 1;
-
-        if (ticksCooking == ticksToCook)
-        {
-            Inventory.instance.Add(cookedDrop);
-            Inventory.instance.Remove(this);
-        }
+        Inventory.instance.Add(cookedDrop);
+        Inventory.instance.Remove(this);
     }
 
 

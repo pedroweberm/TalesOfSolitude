@@ -125,8 +125,6 @@ public class PlayerNecessities : MonoBehaviour
 
     void UpdateThirst(int amount)
     {
-        playerThirst += amount;
-
         if (currentTick > lastThirstTick)
         {
             lastThirstTick = currentTick;
