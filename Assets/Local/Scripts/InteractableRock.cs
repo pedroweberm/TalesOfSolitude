@@ -31,17 +31,19 @@ public class InteractableRock : Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
         switch (interactionType)
         {
             case InteractionType.Mine:
                 rockController.Mine();
+                base.Interact();
                 break;
             case InteractionType.Destroy:
                 rockController.Destroy();
+                base.Interact();
                 break;
         }
+
+        interactionType = InteractionType.None;
     }
 
     public override void Update()

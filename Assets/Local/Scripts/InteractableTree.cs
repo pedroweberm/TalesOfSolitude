@@ -32,20 +32,23 @@ public class InteractableTree : Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
         switch (interactionType)
         {
             case InteractionType.SoftChop:
                 treeController.SoftChop();
+                base.Interact();
                 break;
             case InteractionType.HardChop:
                 treeController.HardChop();
+                base.Interact();
                 break;
             case InteractionType.Water:
                 treeController.Water();
+                base.Interact();
                 break;
         }
+
+        interactionType = InteractionType.None;
     }
 
     public override void Update()

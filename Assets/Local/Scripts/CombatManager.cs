@@ -27,7 +27,7 @@ public class CombatManager : MonoBehaviour
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
-    
+
     private Vector3 spawnPoint = new Vector3(10142.21f, 0.0f, 9376.951f);
     private Quaternion rot = new Quaternion(0.0f, -136.611f, 0.0f, 1.0f);
     private float previousWanderZone;
@@ -41,7 +41,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
@@ -110,6 +110,7 @@ public class CombatManager : MonoBehaviour
         else if (PlayerStats.instance.unitLvl < 40)
         {
             PlayerStats.instance.dmgMult = 1.2f;
+            PlayerStats.instance.healMult = 1.0f;
         }
         else if (PlayerStats.instance.unitLvl == 100)
         {
@@ -120,15 +121,16 @@ public class CombatManager : MonoBehaviour
         {
             PlayerStats.instance.healMult = 2f;
             PlayerStats.instance.dmgMult = 0.75f;
-
         }
         else if (PlayerStats.instance.unitLvl > 75)
         {
             PlayerStats.instance.healMult = 1.5f;
+            PlayerStats.instance.dmgMult = 1.0f;
         }
         else if (PlayerStats.instance.unitLvl > 60)
         {
             PlayerStats.instance.healMult = 1.2f;
+            PlayerStats.instance.dmgMult = 1.0f;
         }
         else
         {
@@ -289,7 +291,6 @@ public class CombatManager : MonoBehaviour
 
             }
         }
-        
     }
 
 
@@ -302,7 +303,7 @@ public class CombatManager : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
 
-            Destroy(animal);
+            animal.GetComponent<AnimalController>().Kill();
             int i = 0;
             bool fullInv;
 
@@ -313,10 +314,10 @@ public class CombatManager : MonoBehaviour
             for (i = 0; i < enemy.amountDropped; i++)
             {
                 fullInv = Inventory.instance.Add(enemy.drop);
-                
+
                 if (fullInv)
                 {
-                    dialogueText.text = "Added " + (i+1).ToString() + " to inventory.";
+                    dialogueText.text = "Added " + (i + 1).ToString() + " to inventory.";
 
                     yield return new WaitForSeconds(0.5f);
                 }
@@ -348,7 +349,7 @@ public class CombatManager : MonoBehaviour
         isCombat = false;
 
         UIPanel.SetActive(true);
-        
+
         combatCanvas.SetActive(false);
     }
 }

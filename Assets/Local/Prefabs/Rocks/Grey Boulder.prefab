@@ -52,7 +52,6 @@ GameObject:
   m_Component:
   - component: {fileID: 305329178308838125}
   - component: {fileID: 5615880449315053627}
-  - component: {fileID: 3232953143343222598}
   - component: {fileID: 8581310796225321147}
   - component: {fileID: -3163671607704454598}
   m_Layer: 0
@@ -95,21 +94,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6, y: 10, z: 5}
   m_Center: {x: 42.57953, y: 309.7797, z: -73.7973}
---- !u!114 &3232953143343222598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7814415070256106919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604ec64a9d1ae4349aec4d9ea44a709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactionTransform: {fileID: 305329178308838125}
-  actionMenu: {fileID: 1241806670013229112}
 --- !u!114 &8581310796225321147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineRewardAmount: 5
   destroyRewardAmount: 20
+  mineThreshold: 5
+  minePenalty: 2
+  destroyPenalty: 5
 --- !u!1001 &3992514007363407681
 PrefabInstance:
   m_ObjectHideFlags: 0
