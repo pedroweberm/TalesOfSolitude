@@ -21,27 +21,35 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
+    public delegate void onItemChanged();
+    public onItemChanged onItemChangedCallback;
+
     public List<Item> items = new List<Item>();
     public int max_items;
     public int stone_amount;
     public int wood_amount;
 
-    public bool Add (Item item)
+    public bool Add(Item item)
     {
-        if ( items.Count < max_items )
+        if (items.Count < max_items)
         {
             items.Add(item);
+            if (onItemChangedCallback != null)
+                onItemChangedCallback.Invoke();
             return true;
+
         }
         else
         {
             return false;
         }
-        
+
     }
 
-    public void Remove (Item item)
+    public void Remove(Item item)
     {
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
         items.Remove(item);
     }
 
