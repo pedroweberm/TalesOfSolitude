@@ -110,6 +110,7 @@ public class CombatManager : MonoBehaviour
         else if (PlayerStats.instance.unitLvl < 40)
         {
             PlayerStats.instance.dmgMult = 1.2f;
+            PlayerStats.instance.healMult = 1.0f;
         }
         else if (PlayerStats.instance.unitLvl == 100)
         {
@@ -120,15 +121,16 @@ public class CombatManager : MonoBehaviour
         {
             PlayerStats.instance.healMult = 2f;
             PlayerStats.instance.dmgMult = 0.75f;
-
         }
         else if (PlayerStats.instance.unitLvl > 75)
         {
             PlayerStats.instance.healMult = 1.5f;
+            PlayerStats.instance.dmgMult = 1.0f;
         }
         else if (PlayerStats.instance.unitLvl > 60)
         {
             PlayerStats.instance.healMult = 1.2f;
+            PlayerStats.instance.dmgMult = 1.0f;
         }
         else
         {
@@ -339,9 +341,6 @@ public class CombatManager : MonoBehaviour
 
             }
         }
-
-
-        
     }
 
 
@@ -354,7 +353,7 @@ public class CombatManager : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
 
-            Destroy(animal);
+            animal.GetComponent<AnimalController>().Kill();
             int i = 0;
             bool fullInv;
 
