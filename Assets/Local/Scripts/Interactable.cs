@@ -11,6 +11,7 @@ enum InteractionType
     Mine,
     Destroy,
     Cook,
+    Drink,
 }
 
 public class Interactable : MonoBehaviour

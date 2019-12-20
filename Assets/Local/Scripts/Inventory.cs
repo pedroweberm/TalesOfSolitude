@@ -30,10 +30,16 @@ public class Inventory : MonoBehaviour
 
     public void SelectItem(int index)
     {
-
-        selectedItem = items[index];
-
+        if (index != -1)
+        {
+            selectedItem = items[index];
+        }
+        else
+        {
+            selectedItem = null;
+        }
     }
+
     public bool Add (Item item)
     {
         if ( items.Count < max_items )

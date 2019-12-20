@@ -33,6 +33,7 @@ public class InteractableCampfire : Interactable
         {
             case InteractionType.Cook:
                 Inventory.instance.selectedItem.Cook();
+                Inventory.instance.SelectItem(-1);
                 break;
 
         }
@@ -42,7 +43,7 @@ public class InteractableCampfire : Interactable
     {
         base.Update();
         //&& Inventory.instance.selectedItem.isFood
-        actionMenu.SetActive(isFocused && !interacted );
+        actionMenu.SetActive(isFocused && !interacted && Inventory.instance.selectedItem.isFood);
     }
 
     public void Cook()

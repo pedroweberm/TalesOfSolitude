@@ -11,6 +11,7 @@ public class Food : Item
     public int ticksToCook;
     private int ticksCooking;
     public Food cookedDrop;
+    public int cookCost;
 
     public new bool isFood = true;
 
@@ -20,9 +21,21 @@ public class Food : Item
         {
             return;
         }
+        if (Inventory.instance.wood_amount > cookCost && Inventory.instance.stone_amount > 5)
+        {
+            Inventory.instance.Remove(this);
+            Inventory.instance.Add(cookedDrop);
+            Inventory.instance.wood_amount -= cookCost;
+            Inventory.instance.stone_amount -= 5;
+        }
+        
+        
+    }
 
-        Inventory.instance.Add(cookedDrop);
+    public void Eat()
+    {
         Inventory.instance.Remove(this);
+        PlayerStats.instance.currentHp += regenAmout;
     }
 
 
