@@ -41,7 +41,8 @@ public class InteractableCampfire : Interactable
     public override void Update()
     {
         base.Update();
-        actionMenu.SetActive(isFocused && !interacted && Inventory.instance.selectedItem.isFood);
+        //&& Inventory.instance.selectedItem.isFood
+        actionMenu.SetActive(isFocused && !interacted );
     }
 
     public void Cook()

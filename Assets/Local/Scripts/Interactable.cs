@@ -10,6 +10,7 @@ enum InteractionType
     Water,
     Mine,
     Destroy,
+    Cook,
 }
 
 public class Interactable : MonoBehaviour

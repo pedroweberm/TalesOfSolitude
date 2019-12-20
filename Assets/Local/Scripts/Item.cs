@@ -7,4 +7,9 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isResource = false;
     public bool isFood = false;
+
+    public virtual void Cook()
+    {
+
+    }
 }

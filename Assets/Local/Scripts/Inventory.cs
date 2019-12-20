@@ -28,7 +28,6 @@ public class Inventory : MonoBehaviour
 
     public Item selectedItem;
 
-
     public void SelectItem(int index)
     {
 
@@ -40,6 +39,10 @@ public class Inventory : MonoBehaviour
         if ( items.Count < max_items )
         {
             items.Add(item);
+            if(items.Count == 1)
+            {
+                SelectItem(0);
+            }
             return true;
         }
         else

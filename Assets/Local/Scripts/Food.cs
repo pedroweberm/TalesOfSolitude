@@ -14,7 +14,7 @@ public class Food : Item
 
     public new bool isFood = true;
 
-    public void Cook()
+    public override void Cook()
     {
         if (ticksToCook == -1)
         {

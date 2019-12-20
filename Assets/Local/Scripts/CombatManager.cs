@@ -190,7 +190,7 @@ public class CombatManager : MonoBehaviour
 
         for (i = 0; i < 25; i++)
         {
-            damage = Random.Range(1, 10);
+            damage = Random.Range(1, 11);
             dialogueText.text = "Your damage is...  " + damage.ToString();
             yield return new WaitForSeconds(0.1f);
             PlayerStats.instance.dmg = damage;
