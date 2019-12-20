@@ -6,7 +6,7 @@ public class PlayerNecessities : MonoBehaviour
     #region SINGLETON
     public static PlayerNecessities instance;
 
-    void Awake ()
+    void Awake()
     {
         if (instance != null)
         {
@@ -85,8 +85,8 @@ public class PlayerNecessities : MonoBehaviour
         playerHunger = PlayerStats.instance.playerCurrentHunger;
         playerThirst = PlayerStats.instance.playerCurrentThirst;
         playerSynchrony = PlayerStats.instance.unitLvl;
-        goodSynchrony = playerSynchrony >= 0;
-        badSynchrony = playerSynchrony < 0;
+        goodSynchrony = playerSynchrony >= 50f;
+        badSynchrony = playerSynchrony < 50f;
 
         UpdateUI();
     }
@@ -157,20 +157,18 @@ public class PlayerNecessities : MonoBehaviour
     public void UpdateSynchrony(int amount)
     {
         PlayerStats.instance.unitLvl += amount;
-        playerSynchrony += PlayerStats.instance.unitLvl;
+        playerSynchrony = PlayerStats.instance.unitLvl;
 
         if (playerSynchrony < 0)
         {
             PlayerStats.instance.unitLvl = 0;
-            playerSynchrony += PlayerStats.instance.unitLvl;
+            playerSynchrony = PlayerStats.instance.unitLvl;
         }
         else if (playerSynchrony > 100)
         {
             PlayerStats.instance.unitLvl = 100;
-            playerSynchrony += PlayerStats.instance.unitLvl;
+            playerSynchrony = PlayerStats.instance.unitLvl;
         }
-        goodSynchrony = playerSynchrony >= 50f;
-        badSynchrony = playerSynchrony < 50f;
     }
 
     public void CheckNecessities()
