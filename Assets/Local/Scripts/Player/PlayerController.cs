@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
 
     void RemoveFocus()
     {
-        Debug.Log("remove");
         if (currentFocus != null)
             currentFocus.onDefocused();
 

@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum InteractionType
+{
+    None,
+    SoftChop,
+    HardChop,
+    Water,
+    Mine,
+    Destroy,
+}
+
 public class Interactable : MonoBehaviour
 {
     public float interactRadius = 3.0f;
@@ -31,7 +41,6 @@ public class Interactable : MonoBehaviour
         if (isFocused && !interacted)
         {
             float distance = Vector3.Distance(player.position, interactionTransform.position);
-            Debug.Log("distancia " + distance + " radius " + interactRadius);
             if (distance <= interactRadius)
             {
                 Interact();

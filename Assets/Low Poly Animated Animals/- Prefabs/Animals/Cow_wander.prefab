@@ -822,10 +822,10 @@ MonoBehaviour:
   unitName: Cow
   maxHp: 50
   currentHp: 50
-  unitLvl: 19
+  unitLvl: 11
   drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
-  amountDropped: 1
-  dmg: 3.95
+  amountDropped: 2
+  dmg: 3.55
   baseDmg: 3
   heal: 3
 --- !u!1 &1247043747989182

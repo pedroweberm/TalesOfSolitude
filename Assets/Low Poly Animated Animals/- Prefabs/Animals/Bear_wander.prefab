@@ -850,10 +850,10 @@ MonoBehaviour:
   unitName: Bear
   maxHp: 100
   currentHp: 100
-  unitLvl: 18
+  unitLvl: 39
   drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
-  amountDropped: 2
-  dmg: 6.9
+  amountDropped: 3
+  dmg: 7.95
   baseDmg: 6
   heal: 5
 --- !u!1 &1451501728278622
