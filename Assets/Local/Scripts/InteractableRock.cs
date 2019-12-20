@@ -35,13 +35,14 @@ public class InteractableRock : Interactable
         {
             case InteractionType.Mine:
                 rockController.Mine();
+                base.Interact();
                 break;
             case InteractionType.Destroy:
                 rockController.Destroy();
+                base.Interact();
                 break;
         }
 
-        base.Interact();
         interactionType = InteractionType.None;
     }
 

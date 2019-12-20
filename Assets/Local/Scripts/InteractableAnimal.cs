@@ -36,16 +36,18 @@ public class InteractableAnimal : Interactable
         {
             case InteractionType.Feed:
                 animalController.Feed();
+                base.Interact();
                 break;
             case InteractionType.Attack:
                 animalController.Attack();
+                base.Interact();
                 break;
             case InteractionType.Pet:
                 animalController.Pet();
+                base.Interact();
                 break;
         }
 
-        base.Interact();
         interactionType = InteractionType.None;
     }
 

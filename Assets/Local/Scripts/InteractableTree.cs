@@ -36,16 +36,18 @@ public class InteractableTree : Interactable
         {
             case InteractionType.SoftChop:
                 treeController.SoftChop();
+                base.Interact();
                 break;
             case InteractionType.HardChop:
                 treeController.HardChop();
+                base.Interact();
                 break;
             case InteractionType.Water:
                 treeController.Water();
+                base.Interact();
                 break;
         }
 
-        base.Interact();
         interactionType = InteractionType.None;
     }
 
