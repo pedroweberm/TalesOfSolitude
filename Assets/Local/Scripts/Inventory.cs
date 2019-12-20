@@ -29,7 +29,21 @@ public class Inventory : MonoBehaviour
     public int stone_amount;
     public int wood_amount;
 
-    public bool Add(Item item)
+    public Item selectedItem;
+
+    public void SelectItem(int index)
+    {
+        if (index != -1)
+        {
+            selectedItem = items[index];
+        }
+        else
+        {
+            selectedItem = null;
+        }
+    }
+
+    public bool Add (Item item)
     {
         if (items.Count < max_items)
         {
@@ -62,4 +76,6 @@ public class Inventory : MonoBehaviour
     {
         wood_amount += amount;
     }
+
+
 }

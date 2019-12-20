@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ca7148cf2ea13489954f0c480d0621, type: 3}
+  m_Script: {fileID: 11500000, guid: ac588f2daa235e24b8e2a6254f6c6ab7, type: 3}
   m_Name: Blue Berry
   m_EditorClassIdentifier: 
   item_name: Item
-  icon: {fileID: 21300000, guid: 9c426f20953298e4ea440879ed4592d7, type: 3}
+  icon: {fileID: 21300000, guid: c28f4521de20192488552a73ae561778, type: 3}
   isResource: 0
+  isFood: 1
+  regenAmout: 2
+  cookedDrop: {fileID: 11400000}
+  cookCost: 1
+  isFood: 1

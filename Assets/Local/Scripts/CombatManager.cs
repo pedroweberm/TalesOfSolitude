@@ -27,7 +27,7 @@ public class CombatManager : MonoBehaviour
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
-    
+
     private Vector3 spawnPoint = new Vector3(10142.21f, 0.0f, 9376.951f);
     private Quaternion rot = new Quaternion(0.0f, -136.611f, 0.0f, 1.0f);
     private float previousWanderZone;
@@ -41,7 +41,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
@@ -187,38 +187,12 @@ public class CombatManager : MonoBehaviour
     }
     IEnumerator PlayerAttack()
     {
-        //if (PlayerStats.instance.unitLvl == 0)
-        //{
-        //    PlayerStats.instance.dmgMult = 3f;
-        //    PlayerStats.instance.healMult = 0.25f;
-        //}
-        //else if (PlayerStats.instance.unitLvl < 10)
-        //{
-        //    PlayerStats.instance.dmgMult = 2f;
-        //    PlayerStats.instance.healMult = 0.5f;
-
-        //}
-        //else if (PlayerStats.instance.unitLvl < 25)
-        //{
-        //    PlayerStats.instance.dmgMult = 1.5f;
-        //    PlayerStats.instance.healMult = 0.75f;
-
-        //}
-        //else if (PlayerStats.instance.unitLvl < 40)
-        //{
-        //    PlayerStats.instance.dmgMult = 1.2f;
-        //}
-        //else
-        //{
-        //    PlayerStats.instance.dmgMult = 1f;
-        //}
-
         int i = 0;
         float damage;
 
         for (i = 0; i < 25; i++)
         {
-            damage = Random.Range(1, 10);
+            damage = Random.Range(1, 11);
             dialogueText.text = "Your damage is...  " + damage.ToString();
             yield return new WaitForSeconds(0.1f);
             PlayerStats.instance.dmg = damage;
@@ -251,30 +225,6 @@ public class CombatManager : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        //if (PlayerStats.instance.unitLvl == 100)
-        //{
-        //    PlayerStats.instance.healMult = 3f;
-        //    PlayerStats.instance.dmgMult = 0.5f;
-
-        //}
-        //else if (PlayerStats.instance.unitLvl > 90)
-        //{
-        //    PlayerStats.instance.healMult = 2f;
-        //    PlayerStats.instance.dmgMult = 0.75f;
-
-        //}
-        //else if (PlayerStats.instance.unitLvl > 75)
-        //{
-        //    PlayerStats.instance.healMult = 1.5f;
-        //}
-        //else if (PlayerStats.instance.unitLvl > 60)
-        //{
-        //    PlayerStats.instance.healMult = 1.2f;
-        //}
-        //else
-        //{
-        //    PlayerStats.instance.healMult = 1f;
-        //}
 
         float heal;
         int i;
@@ -364,10 +314,10 @@ public class CombatManager : MonoBehaviour
             for (i = 0; i < enemy.amountDropped; i++)
             {
                 fullInv = Inventory.instance.Add(enemy.drop);
-                
+
                 if (fullInv)
                 {
-                    dialogueText.text = "Added " + (i+1).ToString() + " to inventory.";
+                    dialogueText.text = "Added " + (i + 1).ToString() + " to inventory.";
 
                     yield return new WaitForSeconds(0.5f);
                 }
@@ -399,7 +349,7 @@ public class CombatManager : MonoBehaviour
         isCombat = false;
 
         UIPanel.SetActive(true);
-        
+
         combatCanvas.SetActive(false);
     }
 }

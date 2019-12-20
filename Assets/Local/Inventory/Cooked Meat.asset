@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Cooked Meat
   m_EditorClassIdentifier: 
   item_name: Cooked Meat
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 0624b6164633961438d27c9dc0b27d52, type: 3}
   isResource: 0
+  isFood: 0
   regenAmout: 10
-  ticksToCook: -1
   cookedDrop: {fileID: 0}
+  cookCost: 0
+  isFood: 1

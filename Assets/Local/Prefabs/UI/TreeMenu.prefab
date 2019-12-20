@@ -344,7 +344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Podar
+  m_Text: Prune
 --- !u!1 &3194674764354871926
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,9 +423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Derrubar
-
-'
+  m_Text: Cut down
 --- !u!1 &4427472912074459355
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Regar
+  m_Text: Water
 --- !u!1 &5102280064721375358
 GameObject:
   m_ObjectHideFlags: 0

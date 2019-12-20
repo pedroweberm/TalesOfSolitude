@@ -10,6 +10,8 @@ enum InteractionType
     Water,
     Mine,
     Destroy,
+    Cook,
+    Drink,
     Feed,
     Attack,
     Pet
