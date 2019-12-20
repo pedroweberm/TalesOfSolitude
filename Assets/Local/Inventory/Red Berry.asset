@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Red Berry
   m_EditorClassIdentifier: 
   item_name: Item
-  icon: {fileID: 21300000, guid: 9c426f20953298e4ea440879ed4592d7, type: 3}
+  icon: {fileID: 21300000, guid: c28f4521de20192488552a73ae561778, type: 3}
   isResource: 0
-  isFood: 1
+  isFood: 0
   regenAmout: 2
   cookedDrop: {fileID: 11400000}
-  cookCost: 1
+  cookCost: 0
   isFood: 1

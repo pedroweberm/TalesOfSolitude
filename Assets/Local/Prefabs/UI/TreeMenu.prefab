@@ -423,7 +423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bring Down
+  m_Text: Cut down
 --- !u!1 &4427472912074459355
 GameObject:
   m_ObjectHideFlags: 0
