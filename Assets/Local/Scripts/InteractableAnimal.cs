@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(TreeController))]
-public class InteractableTree : Interactable
+[RequireComponent(typeof(AnimalController))]
+public class InteractableAnimal : Interactable
 {
     public GameObject actionMenu;
 
-    TreeController treeController;
+    AnimalController animalController;
     Transform uiCanvas;
     Transform uiPanel;
 
@@ -18,32 +18,32 @@ public class InteractableTree : Interactable
 
     private void Start()
     {
-        treeController = GetComponent<TreeController>();
+        animalController = GetComponent<AnimalController>();
 
         uiCanvas = transform.GetChild(0);
         uiPanel = uiCanvas.GetChild(0);
 
         menuButtons = uiPanel.GetComponentsInChildren<Button>();
 
-        menuButtons[0].onClick.AddListener(SoftChop);
-        menuButtons[1].onClick.AddListener(HardChop);
-        menuButtons[2].onClick.AddListener(Water);
+        menuButtons[0].onClick.AddListener(Feed);
+        menuButtons[1].onClick.AddListener(Attack);
+        menuButtons[2].onClick.AddListener(Pet);
     }
 
     public override void Interact()
     {
         switch (interactionType)
         {
-            case InteractionType.SoftChop:
-                treeController.SoftChop();
+            case InteractionType.Feed:
+                animalController.Feed();
                 base.Interact();
                 break;
-            case InteractionType.HardChop:
-                treeController.HardChop();
+            case InteractionType.Attack:
+                animalController.Attack();
                 base.Interact();
                 break;
-            case InteractionType.Water:
-                treeController.Water();
+            case InteractionType.Pet:
+                animalController.Pet();
                 base.Interact();
                 break;
         }
@@ -57,21 +57,21 @@ public class InteractableTree : Interactable
         actionMenu.SetActive(isFocused && !interacted);
     }
 
-    public void SoftChop()
+    public void Feed()
     {
         PlayerController.instance.FollowFocus(this);
-        interactionType = InteractionType.SoftChop;
+        interactionType = InteractionType.Feed;
     }
 
-    public void HardChop()
+    public void Attack()
     {
         PlayerController.instance.FollowFocus(this);
-        interactionType = InteractionType.HardChop;
+        interactionType = InteractionType.Attack;
     }
 
-    public void Water()
+    public void Pet()
     {
         PlayerController.instance.FollowFocus(this);
-        interactionType = InteractionType.Water;
+        interactionType = InteractionType.Pet;
     }
 }

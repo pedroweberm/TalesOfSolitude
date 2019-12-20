@@ -10,6 +10,9 @@ enum InteractionType
     Water,
     Mine,
     Destroy,
+    Feed,
+    Attack,
+    Pet
 }
 
 public class Interactable : MonoBehaviour
@@ -25,6 +28,8 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
         // Scripts de outros objetos vao sobrescrever este metodo
+        PlayerController.instance.RemoveFocus();
+        interacted = true;
         Debug.Log("Interacting with " + transform.name);
     }
 
@@ -44,7 +49,6 @@ public class Interactable : MonoBehaviour
             if (distance <= interactRadius)
             {
                 Interact();
-                interacted = true;
             }
         }
     }

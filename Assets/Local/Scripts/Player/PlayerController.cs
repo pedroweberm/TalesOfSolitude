@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         newFocus.onFocused(transform);
     }
 
-    void RemoveFocus()
+    public void RemoveFocus()
     {
         if (currentFocus != null)
             currentFocus.onDefocused();
