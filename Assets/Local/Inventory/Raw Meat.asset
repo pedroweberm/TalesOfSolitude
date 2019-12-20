@@ -15,6 +15,8 @@ MonoBehaviour:
   item_name: Raw Meat
   icon: {fileID: 0}
   isResource: 0
+  isFood: 1
   regenAmout: 5
-  ticksToCook: 3
   cookedDrop: {fileID: 11400000, guid: 70cdec4addb31fa4882239ddec341bcf, type: 2}
+  cookCost: 10
+  isFood: 1

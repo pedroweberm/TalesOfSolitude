@@ -8,8 +8,6 @@ public class Food : Item
 {
     
     public float regenAmout;
-    public int ticksToCook;
-    private int ticksCooking;
     public Food cookedDrop;
     public int cookCost;
 
@@ -17,10 +15,6 @@ public class Food : Item
 
     public override void Cook()
     {
-        if (ticksToCook == -1)
-        {
-            return;
-        }
         if (Inventory.instance.wood_amount > cookCost && Inventory.instance.stone_amount > 5)
         {
             Inventory.instance.Remove(this);
