@@ -559,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 1390276149824892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3266382, y: 2.3266382, z: 2.3266382}
+  m_LocalScale: {x: 2.1265004, y: 2.1265004, z: 2.1265004}
   m_Children:
   - {fileID: 1402140384689665377}
   - {fileID: 4337251442322414}
@@ -840,10 +840,10 @@ MonoBehaviour:
   unitName: Bear
   maxHp: 100
   currentHp: 100
-  unitLvl: 39
+  unitLvl: 33
   drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
   amountDropped: 1
-  dmg: 7.95
+  dmg: 7.65
   baseDmg: 6
   heal: 5
 --- !u!114 &-627564049134952649

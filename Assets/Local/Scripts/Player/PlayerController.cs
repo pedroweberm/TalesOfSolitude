@@ -34,7 +34,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetKeyDown("c"))
+        {
+            if (Inventory.instance.selectedItem.isFood)
+                Inventory.instance.selectedItem.Eat();
+        }
+            if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }

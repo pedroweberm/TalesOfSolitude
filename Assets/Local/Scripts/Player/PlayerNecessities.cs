@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerNecessities : MonoBehaviour
@@ -211,7 +212,7 @@ public class PlayerNecessities : MonoBehaviour
 
     void Die()
     {
-        Application.Quit();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Debug.Log("Dead.");
     }
 }

@@ -1618,7 +1618,7 @@ Transform:
   m_GameObject: {fileID: 1847083141549040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6920109, y: 3.6920109, z: 3.6920109}
+  m_LocalScale: {x: 3.689724, y: 3.689724, z: 3.689724}
   m_Children:
   - {fileID: 6346117755425275707}
   - {fileID: 4362255668871490}
@@ -1897,10 +1897,10 @@ MonoBehaviour:
   unitName: Horse
   maxHp: 75
   currentHp: 75
-  unitLvl: 36
+  unitLvl: 46
   drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
   amountDropped: 3
-  dmg: 6.8
+  dmg: 7.3
   baseDmg: 5
   heal: 2
 --- !u!114 &2965903579870780340

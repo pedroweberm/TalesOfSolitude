@@ -11,7 +11,10 @@ public class Food : Item
     public Food cookedDrop;
     public int cookCost;
 
-    public new bool isFood = true;
+    public void Reset()
+    {
+        isFood = true;
+    }
 
     public override void Cook()
     {
@@ -26,13 +29,27 @@ public class Food : Item
         
     }
 
-    public void Eat()
+    public override void Eat()
     {
         Inventory.instance.Remove(this);
-        PlayerStats.instance.currentHp += regenAmout;
+        Inventory.instance.selectedItem = null;
+
+        if (PlayerStats.instance.playerCurrentHunger + regenAmout > PlayerStats.instance.playerStartingHunger)
+        {
+            PlayerStats.instance.playerCurrentHunger = PlayerStats.instance.playerStartingHunger;
+        }
+        else
+        {
+            PlayerStats.instance.playerCurrentHunger += regenAmout;
+        }
+
+        if (PlayerStats.instance.currentHp + 0.5f * regenAmout > PlayerStats.instance.maxHp)
+        {
+            PlayerStats.instance.currentHp = PlayerStats.instance.maxHp;
+        }
+        else
+        {
+            PlayerStats.instance.currentHp += 0.5f * regenAmout;
+        }
     }
-
-
-
-
 }

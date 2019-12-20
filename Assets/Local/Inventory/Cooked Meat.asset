@@ -15,8 +15,7 @@ MonoBehaviour:
   item_name: Cooked Meat
   icon: {fileID: 21300000, guid: 0624b6164633961438d27c9dc0b27d52, type: 3}
   isResource: 0
-  isFood: 0
+  isFood: 1
   regenAmout: 10
   cookedDrop: {fileID: 0}
   cookCost: 0
-  isFood: 1

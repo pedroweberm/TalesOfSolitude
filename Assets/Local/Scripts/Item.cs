@@ -12,6 +12,11 @@ public class Item : ScriptableObject
     {
 
     }
+
+    public virtual void Eat()
+    {
+
+    }
     public virtual void Use()
     {
         Debug.Log("Using item");

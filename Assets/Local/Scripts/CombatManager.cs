@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using PolyPerfect;
 using TMPro;
+using UnityEngine.SceneManagement;
 public enum BattleState { START, PLAYER, ENEMY, WON, LOST, PLAYERCHOSE, RUN }
 public class CombatManager : MonoBehaviour
 {
@@ -338,7 +339,7 @@ public class CombatManager : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
 
-            Application.Quit();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
         PlayerStats.instance.ChangeSync(-1);
