@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6156432303238661237}
-  - component: {fileID: -6414081917417414308}
   - component: {fileID: 4422358912963519483}
+  - component: {fileID: 8488427343701579791}
+  - component: {fileID: 6170958875015092578}
   m_Layer: 0
   m_Name: beachPlantRock
   m_TagString: Untagged
@@ -29,27 +30,12 @@ Transform:
   m_LocalPosition: {x: 656.76556, y: 10.059504, z: 639.67816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8281807547246314974}
   - {fileID: 4113256449363117511}
   - {fileID: 4115060604084815687}
-  - {fileID: 8281807547246314974}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6414081917417414308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104823608379769615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5b794d0ae77f564eb7f4eb73ba35590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactionTransform: {fileID: 6156432303238661237}
-  item: {fileID: 11400000, guid: 66cf98c9881c3464f811403091a9d94c, type: 2}
 --- !u!65 &4422358912963519483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63,6 +49,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8488427343701579791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104823608379769615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604ec64a9d1ae4349aec4d9ea44a709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactionTransform: {fileID: 6156432303238661237}
+  actionMenu: {fileID: 3981789733088492161}
+--- !u!114 &6170958875015092578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104823608379769615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6918442800edcc24fbdfecb7c29d5213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineRewardAmount: 1
+  destroyRewardAmount: 5
 --- !u!64 &2562577567940121811
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -162,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109027472145070, guid: 4dcb45769932d8b449fc6523626179be, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4109027472145070, guid: 4dcb45769932d8b449fc6523626179be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -231,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447314, guid: 8b8681c086a094348955216d4ef3cf0f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 447314, guid: 8b8681c086a094348955216d4ef3cf0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -314,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 243823370163662625, guid: 5b64d4530ccc45c49bc27c2140292d8f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 243823370163662625, guid: 5b64d4530ccc45c49bc27c2140292d8f,
         type: 3}
@@ -383,6 +398,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b64d4530ccc45c49bc27c2140292d8f, type: 3}
+--- !u!1 &3981789733088492161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5102280064721375358, guid: 5b64d4530ccc45c49bc27c2140292d8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8182152142791846655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8281807547246314974 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 243823370163662625, guid: 5b64d4530ccc45c49bc27c2140292d8f,
