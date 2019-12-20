@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Blue Berry
   m_EditorClassIdentifier: 
   item_name: Item
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 9c426f20953298e4ea440879ed4592d7, type: 3}
   isResource: 0
