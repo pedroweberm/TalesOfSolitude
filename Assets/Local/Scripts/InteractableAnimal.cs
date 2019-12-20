@@ -32,8 +32,6 @@ public class InteractableAnimal : Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
         switch (interactionType)
         {
             case InteractionType.Feed:
@@ -46,6 +44,9 @@ public class InteractableAnimal : Interactable
                 animalController.Pet();
                 break;
         }
+
+        base.Interact();
+        interactionType = InteractionType.None;
     }
 
     public override void Update()

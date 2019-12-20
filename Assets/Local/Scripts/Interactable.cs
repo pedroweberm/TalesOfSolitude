@@ -28,6 +28,7 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
         // Scripts de outros objetos vao sobrescrever este metodo
+        player.GetComponent<PlayerController>().RemoveFocus();
         Debug.Log("Interacting with " + transform.name);
     }
 

@@ -533,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 1244760467543844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7936854, y: 2.7936854, z: 2.7936854}
+  m_LocalScale: {x: 2.9830866, y: 2.9830866, z: 2.9830866}
   m_Children:
   - {fileID: 3877971243966414432}
   - {fileID: 4427839542157034}
@@ -812,10 +812,10 @@ MonoBehaviour:
   unitName: Cow
   maxHp: 50
   currentHp: 50
-  unitLvl: 48
+  unitLvl: 11
   drop: {fileID: 11400000, guid: 7613ca2b758ce67438ca1f957c136aef, type: 2}
-  amountDropped: 1
-  dmg: 5.4
+  amountDropped: 2
+  dmg: 3.55
   baseDmg: 3
   heal: 3
 --- !u!114 &975307834230504124

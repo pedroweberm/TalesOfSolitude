@@ -31,8 +31,6 @@ public class InteractableRock : Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
         switch (interactionType)
         {
             case InteractionType.Mine:
@@ -42,6 +40,9 @@ public class InteractableRock : Interactable
                 rockController.Destroy();
                 break;
         }
+
+        base.Interact();
+        interactionType = InteractionType.None;
     }
 
     public override void Update()

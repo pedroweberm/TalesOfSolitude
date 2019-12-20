@@ -32,8 +32,6 @@ public class InteractableTree : Interactable
 
     public override void Interact()
     {
-        base.Interact();
-
         switch (interactionType)
         {
             case InteractionType.SoftChop:
@@ -46,6 +44,9 @@ public class InteractableTree : Interactable
                 treeController.Water();
                 break;
         }
+
+        base.Interact();
+        interactionType = InteractionType.None;
     }
 
     public override void Update()
