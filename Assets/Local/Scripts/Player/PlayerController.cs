@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-        } else
+        }
+        else
         {
             Debug.Log("Trying to create more than 1 player controller");
         }
@@ -33,25 +34,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray clickRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
 
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (Physics.Raycast(clickRay, out hitInfo, 300, groundLayer))
             {
-                Debug.Log("Clicked on the UI");
-            }
-            else
-            {
-                if (Physics.Raycast(clickRay, out hitInfo, 300, groundLayer))
-                {
-                    playerMovement.MoveToPoint(hitInfo.point);
+                playerMovement.MoveToPoint(hitInfo.point);
 
-                    RemoveFocus();
-                }
+                RemoveFocus();
             }
-
         }
 
         if (Input.GetMouseButtonDown(1))
